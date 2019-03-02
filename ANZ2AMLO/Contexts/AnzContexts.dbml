@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbanz2amlo" Class="AnzContextsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=158.58.172.18;Initial Catalog=dbanz2amlo;Persist Security Info=True;User ID=sa" SettingsObjectName="ANZ2AMLO.Properties.Settings" SettingsPropertyName="dbanz2amloConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.unloading" Member="unloadings">
+    <Type Name="unloading">
+      <Column Name="unload_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="delivery" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="item" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ship_to_party" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="cus_name" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="external_delivery_id" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="material" Type="System.String" DbType="NChar(25)" CanBeNull="true" />
+      <Column Name="delivery_quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sales_unit" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="picking_status" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="good_movement_stat" Type="System.String" DbType="NChar(3)" CanBeNull="true" />
+      <Column Name="plant" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="base_unit" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="sold_to_paty" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="purchaseing_document" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="good_issue_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="import_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="pk_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kb_number" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ssa_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="customer_material_number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="kb_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unloading_point" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="un_doc_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ob_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unload_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

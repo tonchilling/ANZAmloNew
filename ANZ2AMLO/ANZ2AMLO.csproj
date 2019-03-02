@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A43BC6D2-A37A-4855-90AD-AA5029331061}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ANZ2AMLO</RootNamespace>
+    <AssemblyName>ANZ2AMLO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>anz-2-logo-png-transparent.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DA6DDCE1CCD82149756839E6DD6DA32936B75384</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ANZ2AMLO_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v18.1" />
+    <Reference Include="DevExpress.Data.v18.1" />
+    <Reference Include="DevExpress.Docs.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 18.1\Components\Bin\Framework\DevExpress.Docs.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core" />
+    <Reference Include="DevExpress.Spreadsheet.v18.1.Core, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1" />
+    <Reference Include="DevExpress.XtraBars.v18.1" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v18.1" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\Amlo\Autorizing\MENUGroupBL.cs" />
+    <Compile Include="BAL\Amlo\Autorizing\PER_MENU_PERMISSIONBL.cs" />
+    <Compile Include="BAL\Amlo\Autorizing\UserBL.cs" />
+    <Compile Include="BAL\Amlo\Autorizing\UserGroupBL.cs" />
+    <Compile Include="BAL\Amlo\Importing\ImportTempBAL.cs" />
+    <Compile Include="BAL\Amlo\Master\M_CustomerBAL.cs" />
+    <Compile Include="BAL\Amlo\Trans\PaymentBAL.cs" />
+    <Compile Include="BAL\Amlo\Trans\SourceFile_MappingDetailBAL.cs" />
+    <Compile Include="BAL\Amlo\Trans\SourceFile_MappingDetailColumnBAL.cs" />
+    <Compile Include="BAL\Amlo\Trans\SourceFile_MappingHeaderBAL.cs" />
+    <Compile Include="BAL\BALBase.cs" />
+    <Compile Include="Contexts\AnzContexts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnzContexts.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AmloBase.cs" />
+    <Compile Include="DAL\Amlo\Autorizing\MENUGroupDAL.cs" />
+    <Compile Include="DAL\Amlo\Autorizing\PER_MENU_PERMISSIONDAL.cs" />
+    <Compile Include="DAL\Amlo\Autorizing\UserDAL.cs" />
+    <Compile Include="DAL\Amlo\Autorizing\USERGroupDAL.cs" />
+    <Compile Include="DAL\Amlo\LogDAO.cs" />
+    <Compile Include="DAL\Amlo\Master\M_CustomerDAL.cs" />
+    <Compile Include="DAL\Amlo\Trans\PaymentDAL.cs" />
+    <Compile Include="DAL\Amlo\Trans\SourceFile_MappingDetailColumnDAL.cs" />
+    <Compile Include="DAL\Amlo\Trans\SourceFile_MappingDetailDAL.cs" />
+    <Compile Include="DAL\Amlo\Trans\SourceFile_MappingHeaderDAL.cs" />
+    <Compile Include="DAL\Amlo\UtilDAL.cs" />
+    <Compile Include="DTO\Amlo\Autorizing\MENUGroupDto.cs" />
+    <Compile Include="DTO\Amlo\Autorizing\MyLogin.cs" />
+    <Compile Include="DTO\Amlo\Autorizing\PER_MENU_PERMISSIONDto.cs" />
+    <Compile Include="DTO\Amlo\Autorizing\UserDto.cs" />
+    <Compile Include="DTO\Amlo\Autorizing\UserGroupDto.cs" />
+    <Compile Include="DTO\Amlo\BaseDTO.cs" />
+    <Compile Include="DTO\Amlo\Export\CustomerDTO.cs" />
+    <Compile Include="DTO\Amlo\Importing\ImportDTO.cs" />
+    <Compile Include="DTO\Amlo\LogDTO.cs" />
+    <Compile Include="DTO\Amlo\Master\M_CustomerDTO.cs" />
+    <Compile Include="DTO\Amlo\Trans\PaymentDto.cs" />
+    <Compile Include="DTO\Amlo\Trans\SourceFile_MappingDetailColumnDto.cs" />
+    <Compile Include="DTO\Amlo\Trans\SourceFile_MappingDetailDto.cs" />
+    <Compile Include="DTO\Amlo\Trans\SourceFile_MappingHeaderDto.cs" />
+    <Compile Include="DTO\Amlo\Trans\TransactionANZ.cs" />
+    <Compile Include="DTO\Amlo\Util\ActionX.cs" />
+    <Compile Include="DTO\Amlo\Util\AmloConverting.cs" />
+    <Compile Include="DTO\Amlo\Util\AmloMessage.cs" />
+    <Compile Include="DTO\Amlo\Util\Converting.cs" />
+    <Compile Include="DTO\Amlo\Util\DevExcelUtils.cs" />
+    <Compile Include="DTO\Amlo\Util\Utility.cs" />
+    <Compile Include="DTO\Amlo\Util\XmlHelper.cs" />
+    <Compile Include="DTO\Amlo\Util\XmlSerializerHelper.cs" />
+    <Compile Include="Forms\frm000ReportWorkFlowStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm000ReportWorkFlowStatus.Designer.cs">
+      <DependentUpon>frm000ReportWorkFlowStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCustomerMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomerMaster.Designer.cs">
+      <DependentUpon>frmCustomerMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCustomerMasterDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomerMasterDetail.Designer.cs">
+      <DependentUpon>frmCustomerMasterDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCustomerMasterMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomerMasterMapping.Designer.cs">
+      <DependentUpon>frmCustomerMasterMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGenerateAMLO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGenerateAMLO.Designer.cs">
+      <DependentUpon>frmGenerateAMLO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImportData.designer.cs">
+      <DependentUpon>frmImportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImportDataAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImportDataAll.Designer.cs">
+      <DependentUpon>frmImportDataAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImportDataDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImportDataDaily.Designer.cs">
+      <DependentUpon>frmImportDataDaily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImportDataSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImportDataSetting.Designer.cs">
+      <DependentUpon>frmImportDataSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImportDataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImportDataView.Designer.cs">
+      <DependentUpon>frmImportDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImportFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImportFiles.designer.cs">
+      <DependentUpon>frmImportFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportFilterRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportFilterRule.Designer.cs">
+      <DependentUpon>frmReportFilterRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportMappingcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportMappingcs.Designer.cs">
+      <DependentUpon>frmReportMappingcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettingMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettingMapping.Designer.cs">
+      <DependentUpon>frmSettingMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSourceFileMappingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSourceFileMappingDetail.designer.cs">
+      <DependentUpon>frmSourceFileMappingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSourceFileMappingDetailColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSourceFileMappingDetailColumn.designer.cs">
+      <DependentUpon>frmSourceFileMappingDetailColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSourceFileMappingHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSourceFileMappingHeader.designer.cs">
+      <DependentUpon>frmSourceFileMappingHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransactionMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransactionMaster.Designer.cs">
+      <DependentUpon>frmTransactionMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransectionMasterMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransectionMasterMapping.Designer.cs">
+      <DependentUpon>frmTransectionMasterMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUser.designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserGroup.Designer.cs">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserProfile.designer.cs">
+      <DependentUpon>frmUserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewImporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewImporting.designer.cs">
+      <DependentUpon>frmViewImporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WaitForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitForm2.designer.cs">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="ANZ2AMLO_TemporaryKey.pfx" />
+    <None Include="Contexts\AnzContexts.dbml.layout">
+      <DependentUpon>AnzContexts.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Forms\frm000ReportWorkFlowStatus.resx">
+      <DependentUpon>frm000ReportWorkFlowStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomerMaster.resx">
+      <DependentUpon>frmCustomerMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomerMasterDetail.resx">
+      <DependentUpon>frmCustomerMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomerMasterMapping.resx">
+      <DependentUpon>frmCustomerMasterMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGenerateAMLO.resx">
+      <DependentUpon>frmGenerateAMLO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImportData.resx">
+      <DependentUpon>frmImportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImportDataAll.resx">
+      <DependentUpon>frmImportDataAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImportDataDaily.resx">
+      <DependentUpon>frmImportDataDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImportDataSetting.resx">
+      <DependentUpon>frmImportDataSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImportDataView.resx">
+      <DependentUpon>frmImportDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImportFiles.resx">
+      <DependentUpon>frmImportFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportFilterRule.resx">
+      <DependentUpon>frmReportFilterRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportMappingcs.resx">
+      <DependentUpon>frmReportMappingcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettingMapping.resx">
+      <DependentUpon>frmSettingMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSourceFileMappingDetail.resx">
+      <DependentUpon>frmSourceFileMappingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSourceFileMappingDetailColumn.resx">
+      <DependentUpon>frmSourceFileMappingDetailColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSourceFileMappingHeader.resx">
+      <DependentUpon>frmSourceFileMappingHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransactionMaster.resx">
+      <DependentUpon>frmTransactionMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransectionMasterMapping.resx">
+      <DependentUpon>frmTransectionMasterMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserGroup.resx">
+      <DependentUpon>frmUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserProfile.resx">
+      <DependentUpon>frmUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewImporting.resx">
+      <DependentUpon>frmViewImporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitForm2.resx">
+      <DependentUpon>WaitForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Contexts\AnzContexts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AnzContexts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="anz-2-logo-png-transparent.ico" />
+    <Content Include="Images\anz-2-logo-black-and-white.png" />
+    <Content Include="Images\anz-2-logo-png-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BAL\Amlo\Exporting\" />
+    <Folder Include="BAL\Amlo\Report\" />
+    <Folder Include="DTO\Amlo\Report\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
