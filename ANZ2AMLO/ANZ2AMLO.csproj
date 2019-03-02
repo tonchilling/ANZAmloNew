@@ -493,6 +493,8 @@
     <Content Include="anz-2-logo-png-transparent.ico" />
     <Content Include="Images\anz-2-logo-black-and-white.png" />
     <Content Include="Images\anz-2-logo-png-transparent.png" />
+    <None Include="Images\bgg.jpg" />
+    <None Include="Images\bgColor.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

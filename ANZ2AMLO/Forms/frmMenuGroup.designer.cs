@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuGroup));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,6 +79,7 @@
             this.PMENU_OID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gdResult = new DevExpress.XtraGrid.GridControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdInActive = new System.Windows.Forms.RadioButton();
             this.rdActive = new System.Windows.Forms.RadioButton();
@@ -95,7 +96,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnAddEdit = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
@@ -113,12 +113,11 @@
             this.colName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colName.Caption = "Menu Group Name";
             this.colName.FieldName = "Name";
-            this.colName.MinWidth = 30;
             this.colName.Name = "colName";
             this.colName.OptionsColumn.AllowEdit = false;
             this.colName.Visible = true;
             this.colName.VisibleIndex = 0;
-            this.colName.Width = 441;
+            this.colName.Width = 286;
             // 
             // OrderNo
             // 
@@ -126,10 +125,9 @@
             this.OrderNo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.OrderNo.Caption = "Order No";
             this.OrderNo.FieldName = "OrderNo";
-            this.OrderNo.MinWidth = 30;
             this.OrderNo.Name = "OrderNo";
             this.OrderNo.OptionsColumn.AllowEdit = false;
-            this.OrderNo.Width = 271;
+            this.OrderNo.Width = 181;
             // 
             // ROW_STATE
             // 
@@ -137,13 +135,12 @@
             this.ROW_STATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.ROW_STATE.Caption = "Status";
             this.ROW_STATE.FieldName = "ROW_STATE";
-            this.ROW_STATE.MaxWidth = 150;
-            this.ROW_STATE.MinWidth = 30;
+            this.ROW_STATE.MaxWidth = 100;
             this.ROW_STATE.Name = "ROW_STATE";
             this.ROW_STATE.OptionsColumn.AllowEdit = false;
             this.ROW_STATE.Visible = true;
             this.ROW_STATE.VisibleIndex = 2;
-            this.ROW_STATE.Width = 100;
+            this.ROW_STATE.Width = 27;
             // 
             // EDIT
             // 
@@ -151,19 +148,18 @@
             this.EDIT.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.EDIT.Caption = "Edit";
             this.EDIT.ColumnEdit = this.btnEdit;
-            this.EDIT.MaxWidth = 120;
-            this.EDIT.MinWidth = 30;
+            this.EDIT.MaxWidth = 80;
             this.EDIT.Name = "EDIT";
             this.EDIT.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.EDIT.Visible = true;
             this.EDIT.VisibleIndex = 3;
-            this.EDIT.Width = 100;
+            this.EDIT.Width = 27;
             // 
             // btnEdit
             // 
             this.btnEdit.AutoHeight = false;
             this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Edit", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnEdit.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -175,18 +171,17 @@
             this.DELETE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.DELETE.Caption = "Delete";
             this.DELETE.ColumnEdit = this.btnDelete;
-            this.DELETE.MinWidth = 30;
             this.DELETE.Name = "DELETE";
             this.DELETE.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.DELETE.Visible = true;
             this.DELETE.VisibleIndex = 4;
-            this.DELETE.Width = 100;
+            this.DELETE.Width = 30;
             // 
             // btnDelete
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Delete", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Delete", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDelete.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -198,27 +193,25 @@
             this.DESC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.DESC.Caption = "Description";
             this.DESC.FieldName = "DESC";
-            this.DESC.MinWidth = 30;
             this.DESC.Name = "DESC";
             this.DESC.OptionsColumn.AllowEdit = false;
             this.DESC.Visible = true;
             this.DESC.VisibleIndex = 1;
-            this.DESC.Width = 441;
+            this.DESC.Width = 400;
             // 
             // MENU_OID
             // 
             this.MENU_OID.Caption = "MENU_OID";
             this.MENU_OID.FieldName = "MENU_OID";
-            this.MENU_OID.MinWidth = 15;
+            this.MENU_OID.MinWidth = 10;
             this.MENU_OID.Name = "MENU_OID";
-            this.MENU_OID.Width = 112;
             // 
             // btnView
             // 
             this.btnView.AutoHeight = false;
             this.btnView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnView.Name = "btnView";
             this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -227,66 +220,51 @@
             // 
             this.MENUGROUP_OID.Caption = "MENUGROUP_OID";
             this.MENUGROUP_OID.FieldName = "MENUGROUP_OID";
-            this.MENUGROUP_OID.MinWidth = 30;
             this.MENUGROUP_OID.Name = "MENUGROUP_OID";
-            this.MENUGROUP_OID.Width = 112;
             // 
             // Icon
             // 
             this.Icon.Caption = "Icon";
             this.Icon.FieldName = "Icon";
-            this.Icon.MinWidth = 30;
             this.Icon.Name = "Icon";
-            this.Icon.Width = 112;
             // 
             // SCREEN
             // 
             this.SCREEN.Caption = "SCREEN";
             this.SCREEN.FieldName = "SCREEN";
-            this.SCREEN.MinWidth = 30;
             this.SCREEN.Name = "SCREEN";
-            this.SCREEN.Width = 112;
             // 
             // UPDATE_DATE
             // 
             this.UPDATE_DATE.Caption = "UPDATE_DATE";
             this.UPDATE_DATE.FieldName = "UPDATE_DATE";
-            this.UPDATE_DATE.MinWidth = 30;
             this.UPDATE_DATE.Name = "UPDATE_DATE";
-            this.UPDATE_DATE.Width = 112;
             // 
             // UPDATE_BY
             // 
             this.UPDATE_BY.Caption = "UPDATE_BY";
             this.UPDATE_BY.FieldName = "UPDATE_BY";
-            this.UPDATE_BY.MinWidth = 30;
             this.UPDATE_BY.Name = "UPDATE_BY";
-            this.UPDATE_BY.Width = 112;
             // 
             // CREATE_BY
             // 
             this.CREATE_BY.Caption = "CREATE_BY";
             this.CREATE_BY.FieldName = "CREATE_BY";
-            this.CREATE_BY.MinWidth = 30;
             this.CREATE_BY.Name = "CREATE_BY";
-            this.CREATE_BY.Width = 112;
             // 
             // CREATE_DATE
             // 
             this.CREATE_DATE.Caption = "CREATE_DATE";
             this.CREATE_DATE.FieldName = "CREATE_DATE";
-            this.CREATE_DATE.MinWidth = 30;
             this.CREATE_DATE.Name = "CREATE_DATE";
-            this.CREATE_DATE.Width = 112;
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1182, 58);
+            this.barDockControlRight.Location = new System.Drawing.Point(788, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 828);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 566);
             // 
             // barManager1
             // 
@@ -351,26 +329,23 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1182, 58);
+            this.barDockControlTop.Size = new System.Drawing.Size(788, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 886);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 606);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1182, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(788, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 58);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 828);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 566);
             // 
             // barButtonItem1
             // 
@@ -405,8 +380,6 @@
             this.PMENU_OID,
             this.Icon,
             this.MENUGROUP_OID});
-            this.gridViewResult.DetailHeight = 512;
-            this.gridViewResult.FixedLineWidth = 3;
             this.gridViewResult.GridControl = this.gdResult;
             this.gridViewResult.Name = "gridViewResult";
             this.gridViewResult.OptionsBehavior.AllowIncrementalSearch = true;
@@ -418,34 +391,28 @@
             // 
             this.LINK.Caption = "LINK";
             this.LINK.FieldName = "LINK";
-            this.LINK.MinWidth = 30;
             this.LINK.Name = "LINK";
-            this.LINK.Width = 112;
             // 
             // PMENU_OID
             // 
             this.PMENU_OID.Caption = "PMENU_OID";
             this.PMENU_OID.FieldName = "PMENU_OID";
-            this.PMENU_OID.MinWidth = 30;
             this.PMENU_OID.Name = "PMENU_OID";
-            this.PMENU_OID.Width = 112;
             // 
             // gdResult
             // 
             this.gdResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gdResult.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.gdResult.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gdResult.Location = new System.Drawing.Point(0, 58);
+            this.gdResult.Location = new System.Drawing.Point(0, 40);
             this.gdResult.MainView = this.gridViewResult;
-            this.gdResult.Margin = new System.Windows.Forms.Padding(4);
             this.gdResult.Name = "gdResult";
             this.gdResult.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnView,
             this.btnEdit,
             this.btnDelete});
-            this.gdResult.Size = new System.Drawing.Size(1182, 828);
+            this.gdResult.Size = new System.Drawing.Size(788, 566);
             this.gdResult.TabIndex = 27;
             this.gdResult.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewResult});
@@ -466,20 +433,35 @@
             this.groupBox2.Controls.Add(this.txtDesc);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtName);
-            this.groupBox2.Location = new System.Drawing.Point(16, 17);
+            this.groupBox2.Location = new System.Drawing.Point(11, 12);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(712, 438);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(475, 300);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Input data";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(335, 41);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "*";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rdInActive);
             this.groupBox1.Controls.Add(this.rdActive);
-            this.groupBox1.Location = new System.Drawing.Point(186, 264);
+            this.groupBox1.Location = new System.Drawing.Point(124, 181);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(479, 57);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(319, 39);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Status";
@@ -487,9 +469,10 @@
             // rdInActive
             // 
             this.rdInActive.AutoSize = true;
-            this.rdInActive.Location = new System.Drawing.Point(222, 22);
+            this.rdInActive.Location = new System.Drawing.Point(148, 15);
+            this.rdInActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdInActive.Name = "rdInActive";
-            this.rdInActive.Size = new System.Drawing.Size(89, 23);
+            this.rdInActive.Size = new System.Drawing.Size(64, 17);
             this.rdInActive.TabIndex = 14;
             this.rdInActive.TabStop = true;
             this.rdInActive.Text = "Inactive";
@@ -498,9 +481,10 @@
             // rdActive
             // 
             this.rdActive.AutoSize = true;
-            this.rdActive.Location = new System.Drawing.Point(70, 22);
+            this.rdActive.Location = new System.Drawing.Point(47, 15);
+            this.rdActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdActive.Name = "rdActive";
-            this.rdActive.Size = new System.Drawing.Size(77, 23);
+            this.rdActive.Size = new System.Drawing.Size(55, 17);
             this.rdActive.TabIndex = 0;
             this.rdActive.TabStop = true;
             this.rdActive.Text = "Active";
@@ -509,141 +493,145 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(92, 236);
+            this.label6.Location = new System.Drawing.Point(61, 161);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 19);
+            this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 38;
             this.label6.Text = "Order No";
             this.label6.Visible = false;
             // 
             // txtOrderNo
             // 
-            this.txtOrderNo.Location = new System.Drawing.Point(186, 230);
+            this.txtOrderNo.Location = new System.Drawing.Point(124, 157);
+            this.txtOrderNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtOrderNo.Name = "txtOrderNo";
             this.txtOrderNo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtOrderNo.Size = new System.Drawing.Size(311, 27);
+            this.txtOrderNo.Size = new System.Drawing.Size(209, 21);
             this.txtOrderNo.TabIndex = 37;
             this.txtOrderNo.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(124, 202);
+            this.label5.Location = new System.Drawing.Point(83, 138);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 19);
+            this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 36;
             this.label5.Text = "Icon";
             this.label5.Visible = false;
             // 
             // txtIcon
             // 
-            this.txtIcon.Location = new System.Drawing.Point(186, 196);
+            this.txtIcon.Location = new System.Drawing.Point(124, 134);
+            this.txtIcon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIcon.Name = "txtIcon";
             this.txtIcon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtIcon.Size = new System.Drawing.Size(479, 27);
+            this.txtIcon.Size = new System.Drawing.Size(321, 21);
             this.txtIcon.TabIndex = 35;
             this.txtIcon.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(126, 168);
+            this.label4.Location = new System.Drawing.Point(84, 115);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 19);
+            this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 34;
             this.label4.Text = "Link";
             this.label4.Visible = false;
             // 
             // txtLink
             // 
-            this.txtLink.Location = new System.Drawing.Point(186, 162);
+            this.txtLink.Location = new System.Drawing.Point(124, 111);
+            this.txtLink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLink.Name = "txtLink";
             this.txtLink.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtLink.Size = new System.Drawing.Size(479, 27);
+            this.txtLink.Size = new System.Drawing.Size(321, 21);
             this.txtLink.TabIndex = 33;
             this.txtLink.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 134);
+            this.label3.Location = new System.Drawing.Point(39, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 19);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 32;
             this.label3.Text = "Screen Name";
             this.label3.Visible = false;
             // 
             // txtScreen
             // 
-            this.txtScreen.Location = new System.Drawing.Point(186, 128);
+            this.txtScreen.Location = new System.Drawing.Point(124, 88);
+            this.txtScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtScreen.Name = "txtScreen";
-            this.txtScreen.Size = new System.Drawing.Size(479, 27);
+            this.txtScreen.Size = new System.Drawing.Size(321, 21);
             this.txtScreen.TabIndex = 31;
             this.txtScreen.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 100);
+            this.label2.Location = new System.Drawing.Point(50, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 19);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 30;
             this.label2.Text = "Description";
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(186, 94);
+            this.txtDesc.Location = new System.Drawing.Point(124, 64);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(479, 27);
+            this.txtDesc.Size = new System.Drawing.Size(321, 21);
             this.txtDesc.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 68);
+            this.label1.Location = new System.Drawing.Point(13, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 19);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 28;
             this.label1.Text = "Menu Group Name";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(186, 60);
+            this.txtName.Location = new System.Drawing.Point(124, 41);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(311, 27);
+            this.txtName.Size = new System.Drawing.Size(209, 21);
             this.txtName.TabIndex = 27;
             // 
             // pnAddEdit
             // 
-            this.pnAddEdit.BackColor = System.Drawing.Color.White;
+            this.pnAddEdit.BackColor = System.Drawing.SystemColors.Control;
             this.pnAddEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnAddEdit.Controls.Add(this.groupBox2);
-            this.pnAddEdit.Location = new System.Drawing.Point(219, 101);
+            this.pnAddEdit.Location = new System.Drawing.Point(146, 69);
+            this.pnAddEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnAddEdit.Name = "pnAddEdit";
-            this.pnAddEdit.Size = new System.Drawing.Size(744, 474);
+            this.pnAddEdit.Size = new System.Drawing.Size(497, 325);
             this.pnAddEdit.TabIndex = 28;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(503, 60);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 19);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "*";
             // 
             // frmMenuGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 886);
+            this.ClientSize = new System.Drawing.Size(788, 606);
             this.Controls.Add(this.pnAddEdit);
             this.Controls.Add(this.gdResult);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMenuGroup";
             this.Text = "Menu Group";
             this.Load += new System.EventHandler(this.frmMenuGroup_Load);

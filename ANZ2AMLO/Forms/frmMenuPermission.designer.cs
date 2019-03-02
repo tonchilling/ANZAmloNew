@@ -121,10 +121,9 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1182, 58);
+            this.barDockControlRight.Location = new System.Drawing.Point(788, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 828);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 566);
             // 
             // barManager1
             // 
@@ -150,26 +149,23 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1182, 58);
+            this.barDockControlTop.Size = new System.Drawing.Size(788, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 886);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 606);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1182, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(788, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 58);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 828);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 566);
             // 
             // barButtonItem1
             // 
@@ -188,22 +184,22 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gdDetail);
-            this.groupBox2.Location = new System.Drawing.Point(16, 17);
+            this.groupBox2.Location = new System.Drawing.Point(11, 12);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(712, 591);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(698, 404);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Input data";
             // 
             // gdDetail
             // 
-            this.gdDetail.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.gdDetail.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gdDetail.Location = new System.Drawing.Point(19, 36);
+            this.gdDetail.Location = new System.Drawing.Point(13, 25);
             this.gdDetail.MainView = this.gridDetail;
-            this.gdDetail.Margin = new System.Windows.Forms.Padding(4);
             this.gdDetail.MenuManager = this.barManager1;
             this.gdDetail.Name = "gdDetail";
             this.gdDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -211,7 +207,7 @@
             this.chkView,
             this.chkEdit,
             this.chkDelete});
-            this.gdDetail.Size = new System.Drawing.Size(672, 535);
+            this.gdDetail.Size = new System.Drawing.Size(669, 366);
             this.gdDetail.TabIndex = 15;
             this.gdDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridDetail});
@@ -228,8 +224,6 @@
             this.VIEW,
             this.EDIT,
             this.DELETE});
-            this.gridDetail.DetailHeight = 512;
-            this.gridDetail.FixedLineWidth = 3;
             this.gridDetail.GridControl = this.gdDetail;
             this.gridDetail.Name = "gridDetail";
             this.gridDetail.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -239,70 +233,56 @@
             // 
             this.MENU_OID.Caption = "MENU_OID";
             this.MENU_OID.FieldName = "MENU_OID";
-            this.MENU_OID.MinWidth = 30;
             this.MENU_OID.Name = "MENU_OID";
-            this.MENU_OID.Width = 112;
             // 
             // MENUGROUP_OID
             // 
             this.MENUGROUP_OID.Caption = "MENUGROUP_OID";
             this.MENUGROUP_OID.FieldName = "MENUGROUP_OID";
-            this.MENUGROUP_OID.MinWidth = 30;
             this.MENUGROUP_OID.Name = "MENUGROUP_OID";
-            this.MENUGROUP_OID.Width = 112;
             // 
             // USERGROUP_OID
             // 
             this.USERGROUP_OID.Caption = "USERGROUP_OID";
             this.USERGROUP_OID.FieldName = "USERGROUP_OID";
-            this.USERGROUP_OID.MinWidth = 30;
             this.USERGROUP_OID.Name = "USERGROUP_OID";
-            this.USERGROUP_OID.Width = 112;
             // 
             // MainMenu
             // 
             this.MainMenu.Caption = "Main Menu";
             this.MainMenu.FieldName = "MainMenu";
-            this.MainMenu.MinWidth = 30;
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.OptionsColumn.AllowEdit = false;
             this.MainMenu.Visible = true;
             this.MainMenu.VisibleIndex = 0;
-            this.MainMenu.Width = 112;
             // 
             // MenuName
             // 
             this.MenuName.Caption = "Menu Name";
             this.MenuName.FieldName = "MenuName";
-            this.MenuName.MinWidth = 30;
             this.MenuName.Name = "MenuName";
             this.MenuName.OptionsColumn.AllowEdit = false;
             this.MenuName.Visible = true;
             this.MenuName.VisibleIndex = 1;
-            this.MenuName.Width = 112;
             // 
             // DESC
             // 
             this.DESC.Caption = "Description";
             this.DESC.FieldName = "DESC";
-            this.DESC.MinWidth = 30;
             this.DESC.Name = "DESC";
             this.DESC.OptionsColumn.AllowEdit = false;
             this.DESC.Visible = true;
             this.DESC.VisibleIndex = 2;
-            this.DESC.Width = 112;
             // 
             // VIEW
             // 
             this.VIEW.Caption = "View";
             this.VIEW.ColumnEdit = this.chkView;
             this.VIEW.FieldName = "VIEW";
-            this.VIEW.MinWidth = 30;
             this.VIEW.Name = "VIEW";
             this.VIEW.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.VIEW.Visible = true;
             this.VIEW.VisibleIndex = 3;
-            this.VIEW.Width = 112;
             // 
             // chkView
             // 
@@ -316,12 +296,10 @@
             this.EDIT.Caption = "Edit";
             this.EDIT.ColumnEdit = this.chkEdit;
             this.EDIT.FieldName = "EDIT";
-            this.EDIT.MinWidth = 30;
             this.EDIT.Name = "EDIT";
             this.EDIT.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.EDIT.Visible = true;
             this.EDIT.VisibleIndex = 4;
-            this.EDIT.Width = 112;
             // 
             // chkEdit
             // 
@@ -335,12 +313,10 @@
             this.DELETE.Caption = "Delete";
             this.DELETE.ColumnEdit = this.chkDelete;
             this.DELETE.FieldName = "DELETE";
-            this.DELETE.MinWidth = 30;
             this.DELETE.Name = "DELETE";
             this.DELETE.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.DELETE.Visible = true;
             this.DELETE.VisibleIndex = 5;
-            this.DELETE.Width = 112;
             // 
             // chkDelete
             // 
@@ -360,22 +336,24 @@
             // 
             // pnAddEdit
             // 
-            this.pnAddEdit.BackColor = System.Drawing.Color.White;
+            this.pnAddEdit.BackColor = System.Drawing.SystemColors.Control;
             this.pnAddEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnAddEdit.Controls.Add(this.groupBox2);
-            this.pnAddEdit.Location = new System.Drawing.Point(219, 221);
+            this.pnAddEdit.Location = new System.Drawing.Point(42, 151);
+            this.pnAddEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnAddEdit.Name = "pnAddEdit";
-            this.pnAddEdit.Size = new System.Drawing.Size(744, 625);
+            this.pnAddEdit.Size = new System.Drawing.Size(721, 428);
             this.pnAddEdit.TabIndex = 30;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(219, 65);
+            this.panel1.Location = new System.Drawing.Point(42, 44);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(744, 141);
+            this.panel1.Size = new System.Drawing.Size(721, 97);
             this.panel1.TabIndex = 31;
             // 
             // groupBox1
@@ -383,18 +361,21 @@
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.lbGroupSearch);
             this.groupBox1.Controls.Add(this.cbUserGroupSearch);
-            this.groupBox1.Location = new System.Drawing.Point(16, 17);
+            this.groupBox1.Location = new System.Drawing.Point(11, 12);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(712, 105);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(698, 72);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(556, 40);
+            this.btnSearch.Location = new System.Drawing.Point(592, 28);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(135, 40);
+            this.btnSearch.Size = new System.Drawing.Size(90, 27);
             this.btnSearch.TabIndex = 37;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -403,31 +384,34 @@
             // lbGroupSearch
             // 
             this.lbGroupSearch.AutoSize = true;
-            this.lbGroupSearch.Location = new System.Drawing.Point(53, 51);
+            this.lbGroupSearch.Location = new System.Drawing.Point(35, 35);
+            this.lbGroupSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbGroupSearch.Name = "lbGroupSearch";
-            this.lbGroupSearch.Size = new System.Drawing.Size(53, 19);
+            this.lbGroupSearch.Size = new System.Drawing.Size(36, 13);
             this.lbGroupSearch.TabIndex = 6;
             this.lbGroupSearch.Text = "Group";
             // 
             // cbUserGroupSearch
             // 
             this.cbUserGroupSearch.FormattingEnabled = true;
-            this.cbUserGroupSearch.Location = new System.Drawing.Point(125, 44);
+            this.cbUserGroupSearch.Location = new System.Drawing.Point(83, 30);
+            this.cbUserGroupSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbUserGroupSearch.Name = "cbUserGroupSearch";
-            this.cbUserGroupSearch.Size = new System.Drawing.Size(370, 27);
+            this.cbUserGroupSearch.Size = new System.Drawing.Size(488, 21);
             this.cbUserGroupSearch.TabIndex = 5;
             // 
             // frmMenuPermission
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 886);
+            this.ClientSize = new System.Drawing.Size(788, 606);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnAddEdit);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMenuPermission";
             this.Text = "Menu Permission";
             this.Load += new System.EventHandler(this.frmMenuPermission_Load);

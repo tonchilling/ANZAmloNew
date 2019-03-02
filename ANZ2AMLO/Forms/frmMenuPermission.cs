@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using BL.Amlo.Autorizing;
 using DTO.Amlo.Autorizing;
 using BAL.Amlo.Autorizing;
-
+using System.Drawing;
 namespace ANZ2AMLO.Forms
 {
     public partial class frmMenuPermission : DevExpress.XtraEditors.XtraForm
@@ -27,6 +27,8 @@ namespace ANZ2AMLO.Forms
             dr["USERGROUP_OID"] = "";
             dtUserGroup.Rows.InsertAt(dr, 0);
             cbUserGroupSearch.SelectedIndex = 0;
+            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, (this.MdiParent.ClientSize.Height / 2) - pnAddEdit.Size.Height / 2);
+            pnAddEdit.BackgroundImage = ANZ2AMLO.Properties.Resources.bgg;
         }
 
         void SearchData()
