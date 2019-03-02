@@ -409,16 +409,6 @@ namespace ANZ2AMLO.Forms
             }
         }
 
-        private void navBarItem1_LinkClicked_1(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            if (!HaveForm("frmUserGroup"))
-            {
-                frmUserGroup frm = new frmUserGroup();
-                frm.MdiParent = this;
-                frm.Show();
-            }
-        }
-
         private void navBarItem10_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             if (!HaveForm("frmImportDataView"))
@@ -452,6 +442,57 @@ namespace ANZ2AMLO.Forms
         private void navBarControlMain_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mmMenuGroup_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (!HaveForm("frmMenuGroup"))
+            {
+                frmMenuGroup frm = new frmMenuGroup();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void mmSubMenu_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (!HaveForm("frmSubMenu"))
+            {
+                frmSubMenu frm = new frmSubMenu();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void mmMenuPermission_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (!HaveForm("frmMenuPermission"))
+            {
+                frmMenuPermission frm = new frmMenuPermission();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void mmUser_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            if (!HaveForm("frmUser"))
+            {
+                frmUser frm = new frmUser();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+        }
+
+        private void mmUserGroup_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (!HaveForm("frmUserGroup"))
+            {
+                frmUserGroup frm = new frmUserGroup();
+                frm.MdiParent = this;
+                frm.Show();
+            }
         }
     }
 }

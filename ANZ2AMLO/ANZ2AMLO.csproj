@@ -223,6 +223,18 @@
     <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmMenuGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenuGroup.designer.cs">
+      <DependentUpon>frmMenuGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMenuPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenuPermission.designer.cs">
+      <DependentUpon>frmMenuPermission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmReportFilterRule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +276,12 @@
     </Compile>
     <Compile Include="Forms\frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSubMenu.designer.cs">
+      <DependentUpon>frmSubMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTransactionMaster.cs">
       <SubType>Form</SubType>
@@ -367,6 +385,12 @@
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMenuGroup.resx">
+      <DependentUpon>frmMenuGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMenuPermission.resx">
+      <DependentUpon>frmMenuPermission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReportFilterRule.resx">
       <DependentUpon>frmReportFilterRule.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +411,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSubMenu.resx">
+      <DependentUpon>frmSubMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTransactionMaster.resx">
       <DependentUpon>frmTransactionMaster.cs</DependentUpon>
