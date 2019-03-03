@@ -63,12 +63,12 @@
             this.DELETE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkDelete = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.btnDeleteDetailColumn = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.pnAddEdit = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lbGroupSearch = new System.Windows.Forms.Label();
             this.cbUserGroupSearch = new System.Windows.Forms.ComboBox();
+            this.pnAddEdit = new DevExpress.XtraEditors.PanelControl();
+            this.pnlSearch = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdDetail)).BeginInit();
@@ -77,9 +77,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteDetailColumn)).BeginInit();
-            this.pnAddEdit.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnAddEdit)).BeginInit();
+            this.pnAddEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlSearch)).BeginInit();
+            this.pnlSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // bar2
@@ -121,7 +123,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(788, 40);
+            this.barDockControlRight.Location = new System.Drawing.Point(1335, 40);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 566);
             // 
@@ -149,7 +151,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(788, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(1335, 40);
             // 
             // barDockControlBottom
             // 
@@ -157,7 +159,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 606);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(788, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1335, 0);
             // 
             // barDockControlLeft
             // 
@@ -184,11 +186,11 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.gdDetail);
-            this.groupBox2.Location = new System.Drawing.Point(11, 12);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(4, 14);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(698, 404);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(913, 404);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Input data";
@@ -207,7 +209,7 @@
             this.chkView,
             this.chkEdit,
             this.chkDelete});
-            this.gdDetail.Size = new System.Drawing.Size(669, 366);
+            this.gdDetail.Size = new System.Drawing.Size(880, 366);
             this.gdDetail.TabIndex = 15;
             this.gdDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridDetail});
@@ -334,46 +336,24 @@
             this.btnDeleteDetailColumn.Name = "btnDeleteDetailColumn";
             this.btnDeleteDetailColumn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // pnAddEdit
-            // 
-            this.pnAddEdit.BackColor = System.Drawing.SystemColors.Control;
-            this.pnAddEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnAddEdit.Controls.Add(this.groupBox2);
-            this.pnAddEdit.Location = new System.Drawing.Point(42, 151);
-            this.pnAddEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnAddEdit.Name = "pnAddEdit";
-            this.pnAddEdit.Size = new System.Drawing.Size(721, 428);
-            this.pnAddEdit.TabIndex = 30;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(42, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(721, 97);
-            this.panel1.TabIndex = 31;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.lbGroupSearch);
             this.groupBox1.Controls.Add(this.cbUserGroupSearch);
-            this.groupBox1.Location = new System.Drawing.Point(11, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(14, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(698, 72);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(913, 72);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(592, 28);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(803, 28);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(90, 27);
             this.btnSearch.TabIndex = 37;
@@ -395,23 +375,39 @@
             // 
             this.cbUserGroupSearch.FormattingEnabled = true;
             this.cbUserGroupSearch.Location = new System.Drawing.Point(83, 30);
-            this.cbUserGroupSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbUserGroupSearch.Margin = new System.Windows.Forms.Padding(2);
             this.cbUserGroupSearch.Name = "cbUserGroupSearch";
-            this.cbUserGroupSearch.Size = new System.Drawing.Size(488, 21);
+            this.cbUserGroupSearch.Size = new System.Drawing.Size(707, 21);
             this.cbUserGroupSearch.TabIndex = 5;
+            // 
+            // pnAddEdit
+            // 
+            this.pnAddEdit.Controls.Add(this.groupBox2);
+            this.pnAddEdit.Location = new System.Drawing.Point(42, 161);
+            this.pnAddEdit.Name = "pnAddEdit";
+            this.pnAddEdit.Size = new System.Drawing.Size(939, 433);
+            this.pnAddEdit.TabIndex = 37;
+            // 
+            // pnlSearch
+            // 
+            this.pnlSearch.Controls.Add(this.groupBox1);
+            this.pnlSearch.Location = new System.Drawing.Point(42, 55);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(939, 100);
+            this.pnlSearch.TabIndex = 38;
             // 
             // frmMenuPermission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 606);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1335, 606);
+            this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnAddEdit);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuPermission";
             this.Text = "Menu Permission";
             this.Load += new System.EventHandler(this.frmMenuPermission_Load);
@@ -423,10 +419,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteDetailColumn)).EndInit();
-            this.pnAddEdit.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnAddEdit)).EndInit();
+            this.pnAddEdit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlSearch)).EndInit();
+            this.pnlSearch.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,11 +440,9 @@
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private System.Windows.Forms.Panel pnAddEdit;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbGroupSearch;
         private System.Windows.Forms.ComboBox cbUserGroupSearch;
@@ -466,5 +462,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkView;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkDelete;
+        private DevExpress.XtraEditors.PanelControl pnAddEdit;
+        private DevExpress.XtraEditors.PanelControl pnlSearch;
     }
 }

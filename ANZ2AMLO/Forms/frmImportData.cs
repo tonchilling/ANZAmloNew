@@ -53,6 +53,8 @@ namespace ANZ1AMLO.Forms
                 lblDetail.Text = tempDetailDTO.Data.Tables[0].Rows[0]["SourceFileRefName"].ToString();
                 LoadDetailInFile(tempDetailDTO.Data.Tables[1]);
                 popDetail.Width = 1120;
+                popDetail.Height = 600;
+                popDetail.Location = new Point((this.MdiParent.ClientSize.Width / 2) - popDetail.Size.Width / 2, (this.MdiParent.ClientSize.Height / 2) - popDetail.Size.Height / 2);
                 popDetail.Show();
 
             }

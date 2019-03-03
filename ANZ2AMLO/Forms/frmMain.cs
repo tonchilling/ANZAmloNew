@@ -494,5 +494,10 @@ namespace ANZ2AMLO.Forms
                 frm.Show();
             }
         }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            doLogin();
+        }
     }
 }

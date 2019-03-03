@@ -27,8 +27,13 @@ namespace ANZ2AMLO.Forms
             dr["USERGROUP_OID"] = "";
             dtUserGroup.Rows.InsertAt(dr, 0);
             cbUserGroupSearch.SelectedIndex = 0;
-            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, (this.MdiParent.ClientSize.Height / 2) - pnAddEdit.Size.Height / 2);
-            pnAddEdit.BackgroundImage = ANZ2AMLO.Properties.Resources.bgg;
+            this.BackColor = Color.WhiteSmoke;
+            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, pnAddEdit.Location.Y);
+            pnAddEdit.BackgroundImage = pnlSearch.BackgroundImage = ANZ2AMLO.Properties.Resources.bgg;
+            
+            pnlSearch.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnlSearch.Size.Width / 2, pnlSearch.Location.Y);
+           
+            groupBox2.BackColor = groupBox1.BackColor= Color.Transparent;
         }
 
         void SearchData()

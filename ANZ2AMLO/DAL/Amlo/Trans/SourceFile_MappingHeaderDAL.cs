@@ -189,7 +189,7 @@ namespace DAL.Amlo.Trans
 
 
 
-                ExcecuteNoneQueryObj("sp_Importing_TempToCustomer", tempDTO);
+                ExcecuteNoneQueryObj("[sp_Importing_TempToMaster]", tempDTO);
 
                 isCan = true;
                 CloseConnection();

@@ -42,6 +42,10 @@ namespace ANZ2AMLO.Forms
             btnSave.Enabled = false;
             btnClose.Enabled = false;
             btnNew.Enabled = true;
+            this.BackColor = Color.WhiteSmoke;
+            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, pnAddEdit.Location.Y);
+            pnAddEdit.BackgroundImage = ANZ2AMLO.Properties.Resources.bgg;
+            groupBox2.BackColor = Color.Transparent;
             this.Refresh();
         }
         private void clearData()
@@ -212,6 +216,16 @@ namespace ANZ2AMLO.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             deleteSubMenu();
+        }
+
+        private void btnCloseDialog_EditValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCloseDialog_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            pnAddEdit.Visible = false;
         }
     }
 }

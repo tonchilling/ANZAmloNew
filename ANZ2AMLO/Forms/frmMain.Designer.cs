@@ -75,21 +75,20 @@
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.pnLogin = new System.Windows.Forms.Panel();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCancelLogin = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
+            this.pnLogin = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlMain)).BeginInit();
-            this.pnLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).BeginInit();
+            this.pnLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -238,7 +237,7 @@
             // 
             // navBarControlMain
             // 
-            this.navBarControlMain.ActiveGroup = this.navBarGroup5;
+            this.navBarControlMain.ActiveGroup = this.navBarGroup1;
             this.navBarControlMain.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.navBarControlMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControlMain.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
@@ -283,7 +282,6 @@
             // navBarGroup5
             // 
             this.navBarGroup5.Caption = "User Authorize";
-            this.navBarGroup5.Expanded = true;
             this.navBarGroup5.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsList;
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.mmUserGroup),
@@ -296,7 +294,7 @@
             // mmUserGroup
             // 
             this.mmUserGroup.Caption = "User Group";
-            this.mmUserGroup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.LargeImage")));
+            this.mmUserGroup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmUserGroup.ImageOptions.LargeImage")));
             this.mmUserGroup.Name = "mmUserGroup";
             this.mmUserGroup.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmUserGroup_LinkClicked);
             // 
@@ -331,6 +329,7 @@
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Souce Data Management";
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navImportAll),
@@ -348,7 +347,10 @@
             // 
             // navBarItem10
             // 
+            this.navBarItem10.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("navBarItem10.Appearance.Image")));
+            this.navBarItem10.Appearance.Options.UseImage = true;
             this.navBarItem10.Caption = "002:-View Imported Source data";
+            this.navBarItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem10.ImageOptions.LargeImage")));
             this.navBarItem10.Name = "navBarItem10";
             this.navBarItem10.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem10_LinkClicked);
             // 
@@ -488,23 +490,10 @@
             this.navBarItem4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.ImageOptions.SmallImage")));
             this.navBarItem4.Name = "navBarItem4";
             // 
-            // pnLogin
-            // 
-            this.pnLogin.BackColor = System.Drawing.SystemColors.Menu;
-            this.pnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnLogin.Controls.Add(this.pictureEdit2);
-            this.pnLogin.Controls.Add(this.groupBox2);
-            this.pnLogin.Location = new System.Drawing.Point(328, 177);
-            this.pnLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.pnLogin.Name = "pnLogin";
-            this.pnLogin.Size = new System.Drawing.Size(497, 324);
-            this.pnLogin.TabIndex = 24;
-            // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(29, 16);
+            this.pictureEdit2.Location = new System.Drawing.Point(5, 35);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.AllowFocused = false;
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -515,57 +504,11 @@
             this.pictureEdit2.Size = new System.Drawing.Size(426, 140);
             this.pictureEdit2.TabIndex = 33;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnCancelLogin);
-            this.groupBox2.Controls.Add(this.btnLogin);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtPassword);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtUserName);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(24, 161);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(442, 141);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Login";
-            // 
-            // btnCancelLogin
-            // 
-            this.btnCancelLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelLogin.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelLogin.Location = new System.Drawing.Point(266, 101);
-            this.btnCancelLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelLogin.Name = "btnCancelLogin";
-            this.btnCancelLogin.Size = new System.Drawing.Size(132, 29);
-            this.btnCancelLogin.TabIndex = 37;
-            this.btnCancelLogin.Text = "CANCEL";
-            this.btnCancelLogin.UseVisualStyleBackColor = true;
-            this.btnCancelLogin.Click += new System.EventHandler(this.btnCancelLogin_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(139, 101);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(123, 29);
-            this.btnLogin.TabIndex = 36;
-            this.btnLogin.Text = "LOGIN";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 68);
+            this.label2.Location = new System.Drawing.Point(35, 232);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 18);
@@ -575,7 +518,8 @@
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Location = new System.Drawing.Point(140, 65);
+            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(124, 226);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -586,7 +530,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 31);
+            this.label1.Location = new System.Drawing.Point(35, 197);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 18);
@@ -596,11 +540,64 @@
             // txtUserName
             // 
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserName.Location = new System.Drawing.Point(140, 29);
+            this.txtUserName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(124, 191);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(258, 30);
             this.txtUserName.TabIndex = 32;
+            // 
+            // pnLogin
+            // 
+            this.pnLogin.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnLogin.AppearanceCaption.ForeColor = System.Drawing.Color.CadetBlue;
+            this.pnLogin.AppearanceCaption.Options.UseFont = true;
+            this.pnLogin.AppearanceCaption.Options.UseForeColor = true;
+            this.pnLogin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.pnLogin.Controls.Add(this.simpleButton2);
+            this.pnLogin.Controls.Add(this.pictureEdit2);
+            this.pnLogin.Controls.Add(this.label1);
+            this.pnLogin.Controls.Add(this.btnLogin);
+            this.pnLogin.Controls.Add(this.txtUserName);
+            this.pnLogin.Controls.Add(this.label2);
+            this.pnLogin.Controls.Add(this.txtPassword);
+            this.pnLogin.Location = new System.Drawing.Point(342, 156);
+            this.pnLogin.Name = "pnLogin";
+            this.pnLogin.Size = new System.Drawing.Size(449, 307);
+            this.pnLogin.TabIndex = 34;
+            this.pnLogin.Text = "LOGIN";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.PeachPuff;
+            this.simpleButton2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.simpleButton2.Appearance.BorderColor = System.Drawing.Color.Red;
+            this.simpleButton2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.simpleButton2.Appearance.Options.UseBackColor = true;
+            this.simpleButton2.Appearance.Options.UseBorderColor = true;
+            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.simpleButton2.Location = new System.Drawing.Point(258, 262);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(124, 31);
+            this.simpleButton2.TabIndex = 39;
+            this.simpleButton2.Text = "CANCEL";
+            this.simpleButton2.Click += new System.EventHandler(this.btnCancelLogin_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnLogin.Appearance.BackColor2 = System.Drawing.Color.Lime;
+            this.btnLogin.Appearance.BorderColor = System.Drawing.Color.Green;
+            this.btnLogin.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnLogin.Appearance.Options.UseBackColor = true;
+            this.btnLogin.Appearance.Options.UseBorderColor = true;
+            this.btnLogin.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnLogin.Location = new System.Drawing.Point(124, 262);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(128, 31);
+            this.btnLogin.TabIndex = 38;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // frmMain
             // 
@@ -626,10 +623,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlMain)).EndInit();
-            this.pnLogin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).EndInit();
+            this.pnLogin.ResumeLayout(false);
+            this.pnLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,11 +675,7 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem8;
         private DevExpress.XtraNavBar.NavBarItem navBarItem9;
         private DevExpress.XtraNavBar.NavBarItem navBarItem10;
-        private System.Windows.Forms.Panel pnLogin;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnCancelLogin;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
@@ -690,5 +683,8 @@
         private DevExpress.XtraNavBar.NavBarItem mmMenuGroup;
         private DevExpress.XtraNavBar.NavBarItem mmSubMenu;
         private DevExpress.XtraNavBar.NavBarItem mmMenuPermission;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
+        private DevExpress.XtraEditors.GroupControl pnLogin;
     }
 }

@@ -22,6 +22,7 @@ namespace ANZ2AMLO.Forms
         public frmMenuGroup()
         {
             InitializeComponent();
+            this.BackColor = Color.WhiteSmoke;
         }
 
         void initialData()
@@ -31,8 +32,9 @@ namespace ANZ2AMLO.Forms
             btnSave.Enabled = false;
             btnClose.Enabled = false;
             btnNew.Enabled = true;
-            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, (this.MdiParent.ClientSize.Height / 2) - pnAddEdit.Size.Height / 2);
+            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, pnAddEdit.Location.Y);
             pnAddEdit.BackgroundImage = ANZ2AMLO.Properties.Resources.bgg;
+            groupBox2.BackColor = Color.Transparent;
             this.Refresh();
         }
 
@@ -195,6 +197,16 @@ namespace ANZ2AMLO.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             deleteMenuGroup();
+        }
+
+        private void btnCloseDialog_EditValueChanged(object sender, EventArgs e)
+        {
+            pnAddEdit.Visible = false;
+        }
+
+        private void btnCloseDialog_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            pnAddEdit.Visible = false;
         }
     }
 }

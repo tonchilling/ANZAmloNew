@@ -151,6 +151,7 @@
             this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnView.Name = "btnView";
             this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // gdView
             // 
@@ -361,7 +362,7 @@
             // btnClose
             // 
             this.btnClose.EditValue = "CLOSE";
-            this.btnClose.Location = new System.Drawing.Point(1090, 3);
+            this.btnClose.Location = new System.Drawing.Point(1072, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnClose.Properties.Appearance.Options.UseFont = true;
@@ -917,10 +918,10 @@
             this.popDetail.Controls.Add(this.lblDetail);
             this.popDetail.Controls.Add(this.gdViewDetail);
             this.popDetail.Controls.Add(this.labelControl3);
-            this.popDetail.Location = new System.Drawing.Point(957, 344);
+            this.popDetail.Location = new System.Drawing.Point(44, 344);
             this.popDetail.Manager = this.barManager1;
             this.popDetail.Name = "popDetail";
-            this.popDetail.Size = new System.Drawing.Size(192, 127);
+            this.popDetail.Size = new System.Drawing.Size(1139, 127);
             this.popDetail.TabIndex = 19;
             this.popDetail.Visible = false;
             // 
@@ -1050,5 +1051,6 @@
         private DevExpress.XtraEditors.TextEdit txtPeriod;
         private DevExpress.XtraGrid.Columns.GridColumn colImportD;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnImportDaily;
+        
     }
 }

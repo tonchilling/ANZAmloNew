@@ -14,7 +14,7 @@ using BAL.Amlo.Autorizing;
 
 namespace ANZ2AMLO.Forms
 {
-    public partial class frmUser : DevExpress.XtraEditors.XtraForm
+    public partial class frmUser  : DevExpress.XtraEditors.XtraForm
     {
         UserGroupBL blUserGroup = new UserGroupBL();
         UserBL blUser = new UserBL();
@@ -47,6 +47,7 @@ namespace ANZ2AMLO.Forms
             btnSave.Enabled = false;
             btnClose.Enabled = false;
             btnNew.Enabled = true;
+            this.BackColor = Color.WhiteSmoke;
             this.Refresh();
 
           
@@ -217,7 +218,7 @@ namespace ANZ2AMLO.Forms
         private void frmUser_Load(object sender, EventArgs e)
         {
             loadComboBoxUserGroup();
-            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, (this.MdiParent.ClientSize.Height / 2) - pnAddEdit.Size.Height / 2);
+            pnAddEdit.Location = new Point((this.MdiParent.ClientSize.Width / 2) - pnAddEdit.Size.Width / 2, pnAddEdit.Location.Y);
             initialData();
         }
 
@@ -271,8 +272,11 @@ namespace ANZ2AMLO.Forms
 
         private void buttonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            initialData();
+            pnAddEdit.Visible = false;
+            btnSave.Enabled = false;
             gdResult.Visible = true;
+            btnClose.Enabled = false;
+            btnNew.Enabled = true;
         }
     }
 }

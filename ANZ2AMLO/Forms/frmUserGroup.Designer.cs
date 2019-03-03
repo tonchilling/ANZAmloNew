@@ -72,7 +72,7 @@
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.pnAddEdit = new System.Windows.Forms.Panel();
+            this.btnCloseDialog = new DevExpress.XtraEditors.ButtonEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -83,15 +83,18 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.pnAddEdit = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            this.pnAddEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseDialog.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnAddEdit)).BeginInit();
+            this.pnAddEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // ROW_STATE
@@ -358,16 +361,23 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 566);
             // 
-            // pnAddEdit
+            // btnCloseDialog
             // 
-            this.pnAddEdit.BackColor = System.Drawing.Color.White;
-            this.pnAddEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnAddEdit.Controls.Add(this.groupBox2);
-            this.pnAddEdit.Location = new System.Drawing.Point(146, 129);
-            this.pnAddEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnAddEdit.Name = "pnAddEdit";
-            this.pnAddEdit.Size = new System.Drawing.Size(497, 187);
-            this.pnAddEdit.TabIndex = 22;
+            this.btnCloseDialog.EditValue = "CLOSE";
+            this.btnCloseDialog.Location = new System.Drawing.Point(547, 0);
+            this.btnCloseDialog.Name = "btnCloseDialog";
+            this.btnCloseDialog.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnCloseDialog.Properties.Appearance.Options.UseFont = true;
+            this.btnCloseDialog.Properties.AutoHeight = false;
+            this.btnCloseDialog.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.btnCloseDialog.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close)});
+            this.btnCloseDialog.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnCloseDialog.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnCloseDialog.Size = new System.Drawing.Size(42, 26);
+            this.btnCloseDialog.TabIndex = 35;
+            this.btnCloseDialog.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCloseDialog_ButtonClick);
+            this.btnCloseDialog.EditValueChanged += new System.EventHandler(this.btnCloseDialog_EditValueChanged);
             // 
             // groupBox2
             // 
@@ -378,10 +388,10 @@
             this.groupBox2.Controls.Add(this.txtDesc);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtName);
-            this.groupBox2.Location = new System.Drawing.Point(11, 12);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(55, 55);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(475, 159);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
@@ -414,9 +424,9 @@
             this.groupBox1.Controls.Add(this.rdInActive);
             this.groupBox1.Controls.Add(this.rdActive);
             this.groupBox1.Location = new System.Drawing.Point(115, 83);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(319, 39);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
@@ -426,7 +436,7 @@
             // 
             this.rdInActive.AutoSize = true;
             this.rdInActive.Location = new System.Drawing.Point(148, 15);
-            this.rdInActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdInActive.Margin = new System.Windows.Forms.Padding(2);
             this.rdInActive.Name = "rdInActive";
             this.rdInActive.Size = new System.Drawing.Size(64, 17);
             this.rdInActive.TabIndex = 14;
@@ -438,7 +448,7 @@
             // 
             this.rdActive.AutoSize = true;
             this.rdActive.Location = new System.Drawing.Point(47, 15);
-            this.rdActive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdActive.Margin = new System.Windows.Forms.Padding(2);
             this.rdActive.Name = "rdActive";
             this.rdActive.Size = new System.Drawing.Size(55, 17);
             this.rdActive.TabIndex = 0;
@@ -459,7 +469,7 @@
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(115, 61);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(321, 21);
             this.txtDesc.TabIndex = 34;
@@ -477,10 +487,22 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(115, 36);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(321, 21);
             this.txtName.TabIndex = 32;
+            // 
+            // pnAddEdit
+            // 
+            this.pnAddEdit.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnAddEdit.AppearanceCaption.Options.UseFont = true;
+            this.pnAddEdit.Controls.Add(this.groupBox2);
+            this.pnAddEdit.Controls.Add(this.btnCloseDialog);
+            this.pnAddEdit.Location = new System.Drawing.Point(58, 118);
+            this.pnAddEdit.Name = "pnAddEdit";
+            this.pnAddEdit.Size = new System.Drawing.Size(589, 243);
+            this.pnAddEdit.TabIndex = 32;
+            this.pnAddEdit.Text = "User Group Detail";
             // 
             // frmUserGroup
             // 
@@ -502,11 +524,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            this.pnAddEdit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseDialog.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnAddEdit)).EndInit();
+            this.pnAddEdit.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,7 +558,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnNew;
-        private System.Windows.Forms.Panel pnAddEdit;
         private DevExpress.XtraGrid.Columns.GridColumn CREATE_DATE;
         private DevExpress.XtraGrid.Columns.GridColumn UPDATE_BY;
         private DevExpress.XtraGrid.Columns.GridColumn UPDATE_DATE;
@@ -551,5 +574,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.ButtonEdit btnCloseDialog;
+        private DevExpress.XtraEditors.GroupControl pnAddEdit;
     }
 }

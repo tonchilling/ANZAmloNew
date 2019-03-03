@@ -123,6 +123,7 @@
     <Compile Include="DAL\Amlo\Autorizing\USERGroupDAL.cs" />
     <Compile Include="DAL\Amlo\LogDAO.cs" />
     <Compile Include="DAL\Amlo\Master\M_CustomerDAL.cs" />
+    <Compile Include="DAL\Amlo\Trans\IncomingDAL.cs" />
     <Compile Include="DAL\Amlo\Trans\PaymentDAL.cs" />
     <Compile Include="DAL\Amlo\Trans\SourceFile_MappingDetailColumnDAL.cs" />
     <Compile Include="DAL\Amlo\Trans\SourceFile_MappingDetailDAL.cs" />
