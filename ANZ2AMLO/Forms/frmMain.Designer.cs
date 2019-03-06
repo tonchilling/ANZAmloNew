@@ -47,12 +47,6 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.navBarControlMain = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.mmUserGroup = new DevExpress.XtraNavBar.NavBarItem();
-            this.mmUser = new DevExpress.XtraNavBar.NavBarItem();
-            this.mmMenuGroup = new DevExpress.XtraNavBar.NavBarItem();
-            this.mmSubMenu = new DevExpress.XtraNavBar.NavBarItem();
-            this.mmMenuPermission = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navImportAll = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
@@ -73,6 +67,12 @@
             this.navReportFilterRole = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.mmUserGroup = new DevExpress.XtraNavBar.NavBarItem();
+            this.mmUser = new DevExpress.XtraNavBar.NavBarItem();
+            this.mmMenuGroup = new DevExpress.XtraNavBar.NavBarItem();
+            this.mmSubMenu = new DevExpress.XtraNavBar.NavBarItem();
+            this.mmMenuPermission = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
@@ -279,53 +279,6 @@
             this.navBarControlMain.View = new DevExpress.XtraNavBar.ViewInfo.SkinNavigationPaneViewInfoRegistrator();
             this.navBarControlMain.Click += new System.EventHandler(this.navBarControlMain_Click);
             // 
-            // navBarGroup5
-            // 
-            this.navBarGroup5.Caption = "User Authorize";
-            this.navBarGroup5.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsList;
-            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.mmUserGroup),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.mmUser),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.mmMenuGroup),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.mmSubMenu),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.mmMenuPermission)});
-            this.navBarGroup5.Name = "navBarGroup5";
-            // 
-            // mmUserGroup
-            // 
-            this.mmUserGroup.Caption = "User Group";
-            this.mmUserGroup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmUserGroup.ImageOptions.LargeImage")));
-            this.mmUserGroup.Name = "mmUserGroup";
-            this.mmUserGroup.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmUserGroup_LinkClicked);
-            // 
-            // mmUser
-            // 
-            this.mmUser.Caption = "Users";
-            this.mmUser.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmUser.ImageOptions.LargeImage")));
-            this.mmUser.Name = "mmUser";
-            this.mmUser.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmUser_LinkClicked);
-            // 
-            // mmMenuGroup
-            // 
-            this.mmMenuGroup.Caption = "Menu Group";
-            this.mmMenuGroup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmMenuGroup.ImageOptions.LargeImage")));
-            this.mmMenuGroup.Name = "mmMenuGroup";
-            this.mmMenuGroup.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmMenuGroup_LinkClicked);
-            // 
-            // mmSubMenu
-            // 
-            this.mmSubMenu.Caption = "Sub Menu";
-            this.mmSubMenu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmSubMenu.ImageOptions.LargeImage")));
-            this.mmSubMenu.Name = "mmSubMenu";
-            this.mmSubMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmSubMenu_LinkClicked);
-            // 
-            // mmMenuPermission
-            // 
-            this.mmMenuPermission.Caption = "Menu Permission";
-            this.mmMenuPermission.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmMenuPermission.ImageOptions.LargeImage")));
-            this.mmMenuPermission.Name = "mmMenuPermission";
-            this.mmMenuPermission.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmMenuPermission_LinkClicked);
-            // 
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Souce Data Management";
@@ -478,6 +431,53 @@
             this.navBarItem5.Caption = "006:- Export Report";
             this.navBarItem5.Name = "navBarItem5";
             // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "User Authorize";
+            this.navBarGroup5.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsList;
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.mmUserGroup),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.mmUser),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.mmMenuGroup),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.mmSubMenu),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.mmMenuPermission)});
+            this.navBarGroup5.Name = "navBarGroup5";
+            // 
+            // mmUserGroup
+            // 
+            this.mmUserGroup.Caption = "User Group";
+            this.mmUserGroup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmUserGroup.ImageOptions.LargeImage")));
+            this.mmUserGroup.Name = "mmUserGroup";
+            this.mmUserGroup.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmUserGroup_LinkClicked);
+            // 
+            // mmUser
+            // 
+            this.mmUser.Caption = "Users";
+            this.mmUser.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmUser.ImageOptions.LargeImage")));
+            this.mmUser.Name = "mmUser";
+            this.mmUser.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmUser_LinkClicked);
+            // 
+            // mmMenuGroup
+            // 
+            this.mmMenuGroup.Caption = "Menu Group";
+            this.mmMenuGroup.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmMenuGroup.ImageOptions.LargeImage")));
+            this.mmMenuGroup.Name = "mmMenuGroup";
+            this.mmMenuGroup.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmMenuGroup_LinkClicked);
+            // 
+            // mmSubMenu
+            // 
+            this.mmSubMenu.Caption = "Sub Menu";
+            this.mmSubMenu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmSubMenu.ImageOptions.LargeImage")));
+            this.mmSubMenu.Name = "mmSubMenu";
+            this.mmSubMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmSubMenu_LinkClicked);
+            // 
+            // mmMenuPermission
+            // 
+            this.mmMenuPermission.Caption = "Menu Permission";
+            this.mmMenuPermission.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("mmMenuPermission.ImageOptions.LargeImage")));
+            this.mmMenuPermission.Name = "mmMenuPermission";
+            this.mmMenuPermission.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.mmMenuPermission_LinkClicked);
+            // 
             // navBarItem3
             // 
             this.navBarItem3.Caption = "Validate";
@@ -493,7 +493,7 @@
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(5, 35);
+            this.pictureEdit2.Location = new System.Drawing.Point(11, 35);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.AllowFocused = false;
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;

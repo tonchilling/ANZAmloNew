@@ -106,6 +106,7 @@
     <Compile Include="BAL\Amlo\Autorizing\UserGroupBL.cs" />
     <Compile Include="BAL\Amlo\Importing\ImportTempBAL.cs" />
     <Compile Include="BAL\Amlo\Master\M_CustomerBAL.cs" />
+    <Compile Include="BAL\Amlo\Trans\TransactionMasterBAL.cs" />
     <Compile Include="BAL\Amlo\Trans\PaymentBAL.cs" />
     <Compile Include="BAL\Amlo\Trans\SourceFile_MappingDetailBAL.cs" />
     <Compile Include="BAL\Amlo\Trans\SourceFile_MappingDetailColumnBAL.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="DAL\Amlo\LogDAO.cs" />
     <Compile Include="DAL\Amlo\Master\M_CustomerDAL.cs" />
     <Compile Include="DAL\Amlo\Trans\IncomingDAL.cs" />
+    <Compile Include="DAL\Amlo\Trans\TransactionMasterDAL.cs" />
     <Compile Include="DAL\Amlo\Trans\PaymentDAL.cs" />
     <Compile Include="DAL\Amlo\Trans\SourceFile_MappingDetailColumnDAL.cs" />
     <Compile Include="DAL\Amlo\Trans\SourceFile_MappingDetailDAL.cs" />
