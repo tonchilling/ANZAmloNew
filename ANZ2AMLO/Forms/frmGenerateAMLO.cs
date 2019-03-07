@@ -55,6 +55,16 @@ namespace ANZ2AMLO.Forms
             gridView1.OptionsView.ColumnAutoWidth = false;
             gridView1.BestFitColumns();
         }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
     public class GenAMLOData
     {
