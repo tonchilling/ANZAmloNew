@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using ANZ2AMLO.Forms;
 using BAL.Amlo.Master;
 using DTO.Amlo.Master;
+
 namespace ANZ1AMLO.Forms
 {
     public partial class frmCustomerMaster : DevExpress.XtraEditors.XtraForm
@@ -322,7 +323,16 @@ namespace ANZ1AMLO.Forms
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
+            ANZ2AMLO.BAL.Util.XGenerate.CustomerToExcel(customerObjList, @"D:\ANZ\Output");
+            System.Threading.Thread.Sleep(3000);
+            splashScreenManager1.CloseWaitForm();
+            DevExpress.XtraEditors.XtraMessageBox.Show("Export files completely!!", "EXPORTING", MessageBoxButtons.OK);
+        }
 
+        private void linkOutput_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"D:\ANZ\Output");
         }
     }
   

@@ -335,7 +335,7 @@ namespace ANZ1AMLO.Forms
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            Customers customerObj = new Customers();
+          /*  Customers customerObj = new Customers();
             List<CustomerDTO> customerList = new List<CustomerDTO>();
             CustomerDTO cc = new CustomerDTO();
 
@@ -351,7 +351,7 @@ namespace ANZ1AMLO.Forms
 
 
             customerObj.Customer = customerList;
-          string data=  DTO.Util.XmlSerializerHelper.SerializeObjectToString(customerObj);
+          string data=  DTO.Util.XmlSerializerHelper.SerializeObjectToString(customerObj);*/
         }
 
         private void button1_Click(object sender, EventArgs e)

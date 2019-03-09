@@ -112,6 +112,7 @@
     <Compile Include="BAL\Amlo\Trans\SourceFile_MappingDetailColumnBAL.cs" />
     <Compile Include="BAL\Amlo\Trans\SourceFile_MappingHeaderBAL.cs" />
     <Compile Include="BAL\BALBase.cs" />
+    <Compile Include="BAL\Utils\XGenerate.cs" />
     <Compile Include="Contexts\AnzContexts.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,7 +138,7 @@
     <Compile Include="DTO\Amlo\Autorizing\UserDto.cs" />
     <Compile Include="DTO\Amlo\Autorizing\UserGroupDto.cs" />
     <Compile Include="DTO\Amlo\BaseDTO.cs" />
-    <Compile Include="DTO\Amlo\Export\CustomerDTO.cs" />
+    <Compile Include="DTO\Amlo\Export\AmloToCustomer.cs" />
     <Compile Include="DTO\Amlo\Importing\ImportDTO.cs" />
     <Compile Include="DTO\Amlo\LogDTO.cs" />
     <Compile Include="DTO\Amlo\Master\M_CustomerDTO.cs" />

@@ -81,7 +81,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.pnLogin = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -554,7 +554,7 @@
             this.pnLogin.AppearanceCaption.Options.UseFont = true;
             this.pnLogin.AppearanceCaption.Options.UseForeColor = true;
             this.pnLogin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.pnLogin.Controls.Add(this.simpleButton2);
+            this.pnLogin.Controls.Add(this.btnExit);
             this.pnLogin.Controls.Add(this.pictureEdit2);
             this.pnLogin.Controls.Add(this.label1);
             this.pnLogin.Controls.Add(this.btnLogin);
@@ -567,21 +567,21 @@
             this.pnLogin.TabIndex = 34;
             this.pnLogin.Text = "LOGIN";
             // 
-            // simpleButton2
+            // btnExit
             // 
-            this.simpleButton2.Appearance.BackColor = System.Drawing.Color.PeachPuff;
-            this.simpleButton2.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.simpleButton2.Appearance.BorderColor = System.Drawing.Color.Red;
-            this.simpleButton2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.simpleButton2.Appearance.Options.UseBackColor = true;
-            this.simpleButton2.Appearance.Options.UseBorderColor = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.simpleButton2.Location = new System.Drawing.Point(258, 262);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(124, 31);
-            this.simpleButton2.TabIndex = 39;
-            this.simpleButton2.Text = "CANCEL";
-            this.simpleButton2.Click += new System.EventHandler(this.btnCancelLogin_Click);
+            this.btnExit.Appearance.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnExit.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.Appearance.BorderColor = System.Drawing.Color.Red;
+            this.btnExit.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnExit.Appearance.Options.UseBackColor = true;
+            this.btnExit.Appearance.Options.UseBorderColor = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnExit.Location = new System.Drawing.Point(258, 262);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(124, 31);
+            this.btnExit.TabIndex = 39;
+            this.btnExit.Text = "CANCEL";
+            this.btnExit.Click += new System.EventHandler(this.btnCancelLogin_Click);
             // 
             // btnLogin
             // 
@@ -683,7 +683,7 @@
         private DevExpress.XtraNavBar.NavBarItem mmMenuGroup;
         private DevExpress.XtraNavBar.NavBarItem mmSubMenu;
         private DevExpress.XtraNavBar.NavBarItem mmMenuPermission;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.GroupControl pnLogin;
     }

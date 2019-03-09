@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Collections.Generic;
 namespace DTO.Amlo.Master
 {
     public class M_CustomerDTO
@@ -31,6 +31,45 @@ namespace DTO.Amlo.Master
         public string Active { get; set; }
         public string SourceFile_MappingDetailID { get; set; }
         public string SourceFile_MappingDetailName { get; set; }
+        public List<M_Customer_Account> AccountList { get; set; }
+        public List<M_Customer_Address> AddressList { get; set; }
 
+    }
+
+    public class M_Customer_Account
+    {
+
+
+        public string CustomerOID { get; set; }
+        public string AccountNumber { get; set; }
+        public string CurrencyCode { get; set; }
+        public string AccountType { get; set; }
+        public string SourceBankBranch { get; set; }
+        public string CREATE_BY { get; set; }
+        public string CREATE_DATE { get; set; }
+        public string UPDATE_BY { get; set; }
+        public string UPDATE_DATE { get; set; }
+        public string ROW_STATE { get; set; }
+        public string ImportID { get; set; }
+    }
+
+    public class M_Customer_Address
+    {
+
+        public string AddressOID { get; set; }
+        public string RelateCustomerKYCID { get; set; }
+        public string CustomerOID { get; set; }
+        public string PrincipleAddress { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zipcode { get; set; }
+        public string Country { get; set; }
+        public string ContactNumber { get; set; }
+        public string CREATE_BY { get; set; }
+        public string CREATE_DATE { get; set; }
+        public string UPDATE_BY { get; set; }
+        public string UPDATE_DATE { get; set; }
+        public string ROW_STATE { get; set; }
+        public string ImportID { get; set; }
     }
 }

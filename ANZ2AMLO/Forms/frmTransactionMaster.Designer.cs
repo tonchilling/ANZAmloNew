@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransactionMaster));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnView = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.col5 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -81,6 +81,7 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.linkOutput = new System.Windows.Forms.LinkLabel();
             this.dtTranDate = new System.Windows.Forms.DateTimePicker();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -101,6 +102,69 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ANZ2AMLO.Forms.WaitForm1), true, true);
+            this.btnClose = new DevExpress.XtraEditors.ButtonEdit();
+            this.popDetail = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.txtBeneDescription = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtBeneTranxRefNo = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtBeneAddress = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtBeneBankCountry = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtBeneBankName = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtBeneName = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtBeneAccountNumber = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.txtSendDescription = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtSendTranxRefNo = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtSendAddress = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtSendBankCountry = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtSendBankName = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtSendName = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtSendAccountNumber = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtANZRegisterDate = new System.Windows.Forms.TextBox();
+            this.txtANZCountry = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtANZAddress = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtANZBusinessCode = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtANZRegisterID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtObjective = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtExchangeRate = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtCurrency = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTranxAmountTHB = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTranxSendReceive = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTransactionDate = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBANKAccount = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtInstrumentId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtGroupName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdView)).BeginInit();
@@ -109,6 +173,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popDetail)).BeginInit();
+            this.popDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl2
@@ -124,10 +199,11 @@
             this.btnView.AutoHeight = false;
             this.btnView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnView.Name = "btnView";
             this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // col5
             // 
@@ -476,15 +552,15 @@
             // gdView
             // 
             this.gdView.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdView.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gdView.Location = new System.Drawing.Point(0, 178);
             this.gdView.MainView = this.gridView1;
             this.gdView.Name = "gdView";
             this.gdView.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnView});
-            this.gdView.Size = new System.Drawing.Size(1075, 512);
+            this.gdView.Size = new System.Drawing.Size(1075, 747);
             this.gdView.TabIndex = 17;
             this.gdView.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -506,6 +582,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.linkOutput);
             this.panelControl1.Controls.Add(this.dtTranDate);
             this.panelControl1.Controls.Add(this.textEdit4);
             this.panelControl1.Controls.Add(this.labelControl6);
@@ -521,6 +598,17 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1075, 138);
             this.panelControl1.TabIndex = 18;
+            // 
+            // linkOutput
+            // 
+            this.linkOutput.AutoSize = true;
+            this.linkOutput.Location = new System.Drawing.Point(133, 6);
+            this.linkOutput.Name = "linkOutput";
+            this.linkOutput.Size = new System.Drawing.Size(125, 13);
+            this.linkOutput.TabIndex = 14;
+            this.linkOutput.TabStop = true;
+            this.linkOutput.Text = "Output (D:\\ANZ\\Output)";
+            this.linkOutput.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkOutput_LinkClicked);
             // 
             // dtTranDate
             // 
@@ -593,12 +681,12 @@
             // 
             this.btnExportExcel.Caption = "Export To Excel";
             this.btnExportExcel.Id = 4;
-            this.btnExportExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.btnExportExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.ImageOptions.Image")));
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            toolTipTitleItem1.Text = "Export to Excel";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnExportExcel.SuperTip = superToolTip1;
+            toolTipTitleItem2.Text = "Export to Excel";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnExportExcel.SuperTip = superToolTip2;
             this.btnExportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExportExcel_ItemClick);
             // 
             // barButtonItem2
@@ -621,7 +709,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 690);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 925);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1075, 0);
             // 
@@ -631,7 +719,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 650);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 885);
             // 
             // barDockControlRight
             // 
@@ -639,7 +727,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1075, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 650);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 885);
             // 
             // labelControl6
             // 
@@ -707,11 +795,684 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
+            // btnClose
+            // 
+            this.btnClose.EditValue = "CLOSE";
+            this.btnClose.Location = new System.Drawing.Point(922, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnClose.Properties.Appearance.Options.UseFont = true;
+            this.btnClose.Properties.AutoHeight = false;
+            this.btnClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.btnClose.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close)});
+            this.btnClose.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnClose.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnClose.Size = new System.Drawing.Size(36, 26);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // popDetail
+            // 
+            this.popDetail.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popDetail.AppearanceCaption.Options.UseFont = true;
+            this.popDetail.Controls.Add(this.groupControl5);
+            this.popDetail.Controls.Add(this.groupControl4);
+            this.popDetail.Controls.Add(this.groupControl3);
+            this.popDetail.Controls.Add(this.groupControl2);
+            this.popDetail.Controls.Add(this.btnClose);
+            this.popDetail.Location = new System.Drawing.Point(40, 55);
+            this.popDetail.Name = "popDetail";
+            this.popDetail.Size = new System.Drawing.Size(962, 791);
+            this.popDetail.TabIndex = 6;
+            this.popDetail.Text = "Detail";
+            this.popDetail.Visible = false;
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl5.AppearanceCaption.Options.UseFont = true;
+            this.groupControl5.Controls.Add(this.txtBeneDescription);
+            this.groupControl5.Controls.Add(this.label23);
+            this.groupControl5.Controls.Add(this.txtBeneTranxRefNo);
+            this.groupControl5.Controls.Add(this.label24);
+            this.groupControl5.Controls.Add(this.txtBeneAddress);
+            this.groupControl5.Controls.Add(this.label25);
+            this.groupControl5.Controls.Add(this.txtBeneBankCountry);
+            this.groupControl5.Controls.Add(this.label26);
+            this.groupControl5.Controls.Add(this.txtBeneBankName);
+            this.groupControl5.Controls.Add(this.label27);
+            this.groupControl5.Controls.Add(this.txtBeneName);
+            this.groupControl5.Controls.Add(this.label28);
+            this.groupControl5.Controls.Add(this.txtBeneAccountNumber);
+            this.groupControl5.Controls.Add(this.label29);
+            this.groupControl5.Location = new System.Drawing.Point(36, 595);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(907, 175);
+            this.groupControl5.TabIndex = 9;
+            this.groupControl5.Text = "Bene Detail";
+            // 
+            // txtBeneDescription
+            // 
+            this.txtBeneDescription.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeneDescription.Location = new System.Drawing.Point(535, 136);
+            this.txtBeneDescription.Name = "txtBeneDescription";
+            this.txtBeneDescription.Size = new System.Drawing.Size(350, 23);
+            this.txtBeneDescription.TabIndex = 20;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(448, 139);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(71, 16);
+            this.label23.TabIndex = 19;
+            this.label23.Text = "Description";
+            // 
+            // txtBeneTranxRefNo
+            // 
+            this.txtBeneTranxRefNo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeneTranxRefNo.Location = new System.Drawing.Point(535, 64);
+            this.txtBeneTranxRefNo.Name = "txtBeneTranxRefNo";
+            this.txtBeneTranxRefNo.Size = new System.Drawing.Size(350, 23);
+            this.txtBeneTranxRefNo.TabIndex = 18;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(448, 64);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(83, 16);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "Tranx Ref No";
+            // 
+            // txtBeneAddress
+            // 
+            this.txtBeneAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeneAddress.Location = new System.Drawing.Point(107, 96);
+            this.txtBeneAddress.Multiline = true;
+            this.txtBeneAddress.Name = "txtBeneAddress";
+            this.txtBeneAddress.Size = new System.Drawing.Size(778, 37);
+            this.txtBeneAddress.TabIndex = 16;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(49, 99);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(54, 16);
+            this.label25.TabIndex = 15;
+            this.label25.Text = "Address";
+            // 
+            // txtBeneBankCountry
+            // 
+            this.txtBeneBankCountry.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeneBankCountry.Location = new System.Drawing.Point(105, 138);
+            this.txtBeneBankCountry.Name = "txtBeneBankCountry";
+            this.txtBeneBankCountry.Size = new System.Drawing.Size(325, 23);
+            this.txtBeneBankCountry.TabIndex = 14;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(18, 141);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(83, 16);
+            this.label26.TabIndex = 13;
+            this.label26.Text = "Bank Country";
+            // 
+            // txtBeneBankName
+            // 
+            this.txtBeneBankName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeneBankName.Location = new System.Drawing.Point(107, 67);
+            this.txtBeneBankName.Name = "txtBeneBankName";
+            this.txtBeneBankName.Size = new System.Drawing.Size(312, 23);
+            this.txtBeneBankName.TabIndex = 12;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(31, 67);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(72, 16);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Bank Name";
+            // 
+            // txtBeneName
+            // 
+            this.txtBeneName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeneName.Location = new System.Drawing.Point(535, 35);
+            this.txtBeneName.Name = "txtBeneName";
+            this.txtBeneName.Size = new System.Drawing.Size(350, 23);
+            this.txtBeneName.TabIndex = 10;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(488, 38);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(41, 16);
+            this.label28.TabIndex = 9;
+            this.label28.Text = "Name";
+            // 
+            // txtBeneAccountNumber
+            // 
+            this.txtBeneAccountNumber.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBeneAccountNumber.Location = new System.Drawing.Point(107, 38);
+            this.txtBeneAccountNumber.Name = "txtBeneAccountNumber";
+            this.txtBeneAccountNumber.Size = new System.Drawing.Size(312, 23);
+            this.txtBeneAccountNumber.TabIndex = 8;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(7, 38);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(102, 16);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "Account Number";
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.Controls.Add(this.txtSendDescription);
+            this.groupControl4.Controls.Add(this.label22);
+            this.groupControl4.Controls.Add(this.txtSendTranxRefNo);
+            this.groupControl4.Controls.Add(this.label21);
+            this.groupControl4.Controls.Add(this.txtSendAddress);
+            this.groupControl4.Controls.Add(this.label20);
+            this.groupControl4.Controls.Add(this.txtSendBankCountry);
+            this.groupControl4.Controls.Add(this.label18);
+            this.groupControl4.Controls.Add(this.txtSendBankName);
+            this.groupControl4.Controls.Add(this.label19);
+            this.groupControl4.Controls.Add(this.txtSendName);
+            this.groupControl4.Controls.Add(this.label17);
+            this.groupControl4.Controls.Add(this.txtSendAccountNumber);
+            this.groupControl4.Controls.Add(this.label16);
+            this.groupControl4.Location = new System.Drawing.Point(36, 415);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(907, 174);
+            this.groupControl4.TabIndex = 8;
+            this.groupControl4.Text = "Sender Detail";
+            // 
+            // txtSendDescription
+            // 
+            this.txtSendDescription.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendDescription.Location = new System.Drawing.Point(534, 139);
+            this.txtSendDescription.Name = "txtSendDescription";
+            this.txtSendDescription.Size = new System.Drawing.Size(350, 23);
+            this.txtSendDescription.TabIndex = 20;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(447, 142);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(71, 16);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "Description";
+            // 
+            // txtSendTranxRefNo
+            // 
+            this.txtSendTranxRefNo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendTranxRefNo.Location = new System.Drawing.Point(535, 64);
+            this.txtSendTranxRefNo.Name = "txtSendTranxRefNo";
+            this.txtSendTranxRefNo.Size = new System.Drawing.Size(350, 23);
+            this.txtSendTranxRefNo.TabIndex = 18;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(448, 64);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(83, 16);
+            this.label21.TabIndex = 17;
+            this.label21.Text = "Tranx Ref No";
+            // 
+            // txtSendAddress
+            // 
+            this.txtSendAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendAddress.Location = new System.Drawing.Point(107, 96);
+            this.txtSendAddress.Multiline = true;
+            this.txtSendAddress.Name = "txtSendAddress";
+            this.txtSendAddress.Size = new System.Drawing.Size(778, 37);
+            this.txtSendAddress.TabIndex = 16;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(49, 99);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(54, 16);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "Address";
+            // 
+            // txtSendBankCountry
+            // 
+            this.txtSendBankCountry.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendBankCountry.Location = new System.Drawing.Point(107, 142);
+            this.txtSendBankCountry.Name = "txtSendBankCountry";
+            this.txtSendBankCountry.Size = new System.Drawing.Size(323, 23);
+            this.txtSendBankCountry.TabIndex = 14;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(20, 145);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 16);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Bank Country";
+            // 
+            // txtSendBankName
+            // 
+            this.txtSendBankName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendBankName.Location = new System.Drawing.Point(107, 67);
+            this.txtSendBankName.Name = "txtSendBankName";
+            this.txtSendBankName.Size = new System.Drawing.Size(323, 23);
+            this.txtSendBankName.TabIndex = 12;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(31, 67);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(72, 16);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Bank Name";
+            // 
+            // txtSendName
+            // 
+            this.txtSendName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendName.Location = new System.Drawing.Point(535, 35);
+            this.txtSendName.Name = "txtSendName";
+            this.txtSendName.Size = new System.Drawing.Size(350, 23);
+            this.txtSendName.TabIndex = 10;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(488, 38);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 16);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Name";
+            // 
+            // txtSendAccountNumber
+            // 
+            this.txtSendAccountNumber.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSendAccountNumber.Location = new System.Drawing.Point(107, 38);
+            this.txtSendAccountNumber.Name = "txtSendAccountNumber";
+            this.txtSendAccountNumber.Size = new System.Drawing.Size(323, 23);
+            this.txtSendAccountNumber.TabIndex = 8;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(7, 38);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(102, 16);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "Account Number";
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.Controls.Add(this.label15);
+            this.groupControl3.Controls.Add(this.txtANZRegisterDate);
+            this.groupControl3.Controls.Add(this.txtANZCountry);
+            this.groupControl3.Controls.Add(this.label14);
+            this.groupControl3.Controls.Add(this.txtANZAddress);
+            this.groupControl3.Controls.Add(this.label13);
+            this.groupControl3.Controls.Add(this.txtANZBusinessCode);
+            this.groupControl3.Controls.Add(this.label12);
+            this.groupControl3.Controls.Add(this.txtANZRegisterID);
+            this.groupControl3.Controls.Add(this.label11);
+            this.groupControl3.Location = new System.Drawing.Point(36, 248);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(907, 152);
+            this.groupControl3.TabIndex = 7;
+            this.groupControl3.Text = "ANZ Customer Detail";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(447, 107);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 16);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Register Date";
+            // 
+            // txtANZRegisterDate
+            // 
+            this.txtANZRegisterDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtANZRegisterDate.Location = new System.Drawing.Point(534, 104);
+            this.txtANZRegisterDate.Name = "txtANZRegisterDate";
+            this.txtANZRegisterDate.Size = new System.Drawing.Size(350, 23);
+            this.txtANZRegisterDate.TabIndex = 15;
+            // 
+            // txtANZCountry
+            // 
+            this.txtANZCountry.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtANZCountry.Location = new System.Drawing.Point(104, 108);
+            this.txtANZCountry.Name = "txtANZCountry";
+            this.txtANZCountry.Size = new System.Drawing.Size(314, 23);
+            this.txtANZCountry.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(46, 111);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(52, 16);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Country";
+            // 
+            // txtANZAddress
+            // 
+            this.txtANZAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtANZAddress.Location = new System.Drawing.Point(104, 63);
+            this.txtANZAddress.Multiline = true;
+            this.txtANZAddress.Name = "txtANZAddress";
+            this.txtANZAddress.Size = new System.Drawing.Size(780, 37);
+            this.txtANZAddress.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(44, 66);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 16);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Address";
+            // 
+            // txtANZBusinessCode
+            // 
+            this.txtANZBusinessCode.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtANZBusinessCode.Location = new System.Drawing.Point(559, 31);
+            this.txtANZBusinessCode.Name = "txtANZBusinessCode";
+            this.txtANZBusinessCode.Size = new System.Drawing.Size(325, 23);
+            this.txtANZBusinessCode.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(463, 34);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 16);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Business Code";
+            // 
+            // txtANZRegisterID
+            // 
+            this.txtANZRegisterID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtANZRegisterID.Location = new System.Drawing.Point(106, 34);
+            this.txtANZRegisterID.Name = "txtANZRegisterID";
+            this.txtANZRegisterID.Size = new System.Drawing.Size(350, 23);
+            this.txtANZRegisterID.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(29, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 16);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Register ID";
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.AppearanceCaption.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.groupControl2.AppearanceCaption.BackColor2 = System.Drawing.Color.PaleTurquoise;
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl2.AppearanceCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.groupControl2.AppearanceCaption.Options.UseBackColor = true;
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
+            this.groupControl2.Controls.Add(this.txtObjective);
+            this.groupControl2.Controls.Add(this.label9);
+            this.groupControl2.Controls.Add(this.txtExchangeRate);
+            this.groupControl2.Controls.Add(this.label8);
+            this.groupControl2.Controls.Add(this.txtCurrency);
+            this.groupControl2.Controls.Add(this.label7);
+            this.groupControl2.Controls.Add(this.txtTranxAmountTHB);
+            this.groupControl2.Controls.Add(this.label6);
+            this.groupControl2.Controls.Add(this.txtTranxSendReceive);
+            this.groupControl2.Controls.Add(this.label5);
+            this.groupControl2.Controls.Add(this.txtTransactionDate);
+            this.groupControl2.Controls.Add(this.label4);
+            this.groupControl2.Controls.Add(this.txtBANKAccount);
+            this.groupControl2.Controls.Add(this.label3);
+            this.groupControl2.Controls.Add(this.txtInstrumentId);
+            this.groupControl2.Controls.Add(this.label2);
+            this.groupControl2.Controls.Add(this.txtGroupName);
+            this.groupControl2.Controls.Add(this.label1);
+            this.groupControl2.Location = new System.Drawing.Point(36, 49);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(907, 189);
+            this.groupControl2.TabIndex = 6;
+            this.groupControl2.Text = "Transaction Detail";
+            // 
+            // txtObjective
+            // 
+            this.txtObjective.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObjective.Location = new System.Drawing.Point(91, 158);
+            this.txtObjective.Name = "txtObjective";
+            this.txtObjective.Size = new System.Drawing.Size(328, 23);
+            this.txtObjective.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Objective";
+            // 
+            // txtExchangeRate
+            // 
+            this.txtExchangeRate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExchangeRate.Location = new System.Drawing.Point(535, 124);
+            this.txtExchangeRate.Name = "txtExchangeRate";
+            this.txtExchangeRate.Size = new System.Drawing.Size(350, 23);
+            this.txtExchangeRate.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(437, 127);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 16);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Exchange Rate";
+            // 
+            // txtCurrency
+            // 
+            this.txtCurrency.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrency.Location = new System.Drawing.Point(91, 129);
+            this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.Size = new System.Drawing.Size(328, 23);
+            this.txtCurrency.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(29, 132);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 16);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Currency";
+            // 
+            // txtTranxAmountTHB
+            // 
+            this.txtTranxAmountTHB.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTranxAmountTHB.Location = new System.Drawing.Point(555, 95);
+            this.txtTranxAmountTHB.Name = "txtTranxAmountTHB";
+            this.txtTranxAmountTHB.Size = new System.Drawing.Size(330, 23);
+            this.txtTranxAmountTHB.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(441, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "TranxAmount THB";
+            // 
+            // txtTranxSendReceive
+            // 
+            this.txtTranxSendReceive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTranxSendReceive.Location = new System.Drawing.Point(125, 100);
+            this.txtTranxSendReceive.Name = "txtTranxSendReceive";
+            this.txtTranxSendReceive.Size = new System.Drawing.Size(294, 23);
+            this.txtTranxSendReceive.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "TranxSendReceive";
+            // 
+            // txtTransactionDate
+            // 
+            this.txtTransactionDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransactionDate.Location = new System.Drawing.Point(555, 66);
+            this.txtTransactionDate.Name = "txtTransactionDate";
+            this.txtTransactionDate.Size = new System.Drawing.Size(330, 23);
+            this.txtTransactionDate.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(445, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Transaction Date";
+            // 
+            // txtBANKAccount
+            // 
+            this.txtBANKAccount.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBANKAccount.Location = new System.Drawing.Point(91, 71);
+            this.txtBANKAccount.Name = "txtBANKAccount";
+            this.txtBANKAccount.Size = new System.Drawing.Size(328, 23);
+            this.txtBANKAccount.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "BANK Account";
+            // 
+            // txtInstrumentId
+            // 
+            this.txtInstrumentId.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInstrumentId.Location = new System.Drawing.Point(530, 40);
+            this.txtInstrumentId.Name = "txtInstrumentId";
+            this.txtInstrumentId.Size = new System.Drawing.Size(355, 23);
+            this.txtInstrumentId.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(448, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "InstrumentId";
+            // 
+            // txtGroupName
+            // 
+            this.txtGroupName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGroupName.Location = new System.Drawing.Point(91, 42);
+            this.txtGroupName.Name = "txtGroupName";
+            this.txtGroupName.Size = new System.Drawing.Size(328, 23);
+            this.txtGroupName.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Group Name";
+            // 
             // frmTransactionMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 690);
+            this.ClientSize = new System.Drawing.Size(1075, 925);
+            this.Controls.Add(this.popDetail);
             this.Controls.Add(this.gdView);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -730,6 +1491,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popDetail)).EndInit();
+            this.popDetail.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            this.groupControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -799,5 +1575,69 @@
         private DevExpress.XtraEditors.TextEdit txtMonth;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private System.Windows.Forms.DateTimePicker dtTranDate;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.Windows.Forms.LinkLabel linkOutput;
+        private DevExpress.XtraEditors.ButtonEdit btnClose;
+        private DevExpress.XtraEditors.GroupControl popDetail;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtTranxSendReceive;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTransactionDate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBANKAccount;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtInstrumentId;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtGroupName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCurrency;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private System.Windows.Forms.TextBox txtANZRegisterID;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtANZRegisterDate;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtANZAddress;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private System.Windows.Forms.TextBox txtSendTranxRefNo;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtSendAddress;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtSendBankCountry;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtSendBankName;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtSendName;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtSendAccountNumber;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtSendDescription;
+        private System.Windows.Forms.Label label22;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private System.Windows.Forms.TextBox txtBeneDescription;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtBeneAddress;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtBeneBankCountry;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtBeneName;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtBeneBankName;
+        private System.Windows.Forms.TextBox txtBeneAccountNumber;
+        private System.Windows.Forms.TextBox txtTranxAmountTHB;
+        private System.Windows.Forms.TextBox txtExchangeRate;
+        private System.Windows.Forms.TextBox txtObjective;
+        private System.Windows.Forms.TextBox txtANZBusinessCode;
+        private System.Windows.Forms.TextBox txtANZCountry;
+        private System.Windows.Forms.TextBox txtBeneTranxRefNo;
     }
 }

@@ -103,6 +103,7 @@
             this.CustomerOID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.linkOutput = new System.Windows.Forms.LinkLabel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.popupContainerControl1 = new DevExpress.XtraEditors.PopupContainerControl();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -497,6 +498,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.linkOutput);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -504,6 +506,17 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1097, 48);
             this.panelControl1.TabIndex = 16;
+            // 
+            // linkOutput
+            // 
+            this.linkOutput.AutoSize = true;
+            this.linkOutput.Location = new System.Drawing.Point(127, 6);
+            this.linkOutput.Name = "linkOutput";
+            this.linkOutput.Size = new System.Drawing.Size(125, 13);
+            this.linkOutput.TabIndex = 6;
+            this.linkOutput.TabStop = true;
+            this.linkOutput.Text = "Output (D:\\ANZ\\Output)";
+            this.linkOutput.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkOutput_LinkClicked);
             // 
             // labelControl1
             // 
@@ -1215,5 +1228,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn UPDATE_DATE;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn ContactNumber;
+        private System.Windows.Forms.LinkLabel linkOutput;
     }
 }
