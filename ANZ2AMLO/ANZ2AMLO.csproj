@@ -146,12 +146,13 @@
     <Compile Include="DTO\Amlo\Trans\SourceFile_MappingDetailColumnDto.cs" />
     <Compile Include="DTO\Amlo\Trans\SourceFile_MappingDetailDto.cs" />
     <Compile Include="DTO\Amlo\Trans\SourceFile_MappingHeaderDto.cs" />
-    <Compile Include="DTO\Amlo\Trans\TransactionANZ.cs" />
+    <Compile Include="DTO\Amlo\Trans\TransactionMasterDTO.cs" />
     <Compile Include="DTO\Amlo\Util\ActionX.cs" />
     <Compile Include="DTO\Amlo\Util\AmloConverting.cs" />
     <Compile Include="DTO\Amlo\Util\AmloMessage.cs" />
     <Compile Include="DTO\Amlo\Util\Converting.cs" />
     <Compile Include="DTO\Amlo\Util\DevExcelUtils.cs" />
+    <Compile Include="DTO\Amlo\Util\MessageDto.cs" />
     <Compile Include="DTO\Amlo\Util\Utility.cs" />
     <Compile Include="DTO\Amlo\Util\XmlHelper.cs" />
     <Compile Include="DTO\Amlo\Util\XmlSerializerHelper.cs" />

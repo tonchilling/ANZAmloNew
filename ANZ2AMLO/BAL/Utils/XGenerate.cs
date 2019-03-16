@@ -133,7 +133,7 @@ namespace ANZ2AMLO.BAL.Util
             return data;
         }
 
-        public static bool TransactionToExcel(List<TransactionANZ> tranList, string path)
+        public static bool TransactionToExcel(List<TransactionMasterDTO> tranList, string path)
         {
             bool result = false;
             Workbook workBook = new Workbook();
@@ -175,7 +175,7 @@ namespace ANZ2AMLO.BAL.Util
 
             int row = 1, col = 0;
             string addr, acc;
-            foreach (TransactionANZ tranObj in tranList)
+            foreach (TransactionMasterDTO tranObj in tranList)
             {
                 addr = "";
                 acc = "";

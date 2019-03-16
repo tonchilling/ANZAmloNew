@@ -12,7 +12,7 @@ namespace DAL.Amlo.Trans
 {
     public class IncomingDAL : AmloBase
     {
-        List<TransactionANZ> objList = null;
+        List<TransactionMasterDTO> objList = null;
         bool isCan = false;
         public IncomingDAL()
         {
@@ -40,10 +40,10 @@ namespace DAL.Amlo.Trans
         }
 
 
-        public List<TransactionANZ> FindByObjList(object data)
+        public List<TransactionMasterDTO> FindByObjList(object data)
         {
             List<SqlParameter> parameterList = new List<SqlParameter>();
-            objList = new List<TransactionANZ>();
+            objList = new List<TransactionMasterDTO>();
            
             string procName = "GetPaymentOutput";
             try
@@ -70,7 +70,7 @@ namespace DAL.Amlo.Trans
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    objList = Converting.GetListFromDataReader<TransactionANZ>(reader).ToList();
+                    objList = Converting.GetListFromDataReader<TransactionMasterDTO>(reader).ToList();
                 }
 
 

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransactionMaster));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnView = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.col5 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -105,6 +105,8 @@
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ANZ2AMLO.Forms.WaitForm1), true, true);
             this.btnClose = new DevExpress.XtraEditors.ButtonEdit();
             this.popDetail = new DevExpress.XtraEditors.GroupControl();
+            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.txtBeneDescription = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -199,7 +201,7 @@
             this.btnView.AutoHeight = false;
             this.btnView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnView.Name = "btnView";
             this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -360,7 +362,7 @@
             // gridColumn11
             // 
             this.gridColumn11.Caption = "ANZ Customer Register Name";
-            this.gridColumn11.FieldName = "TranxObjective";
+            this.gridColumn11.FieldName = "ANZCutomerRegisterName";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 12;
@@ -552,9 +554,9 @@
             // gdView
             // 
             this.gdView.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gdView.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gdView.Location = new System.Drawing.Point(0, 178);
             this.gdView.MainView = this.gridView1;
             this.gdView.Name = "gdView";
@@ -684,9 +686,9 @@
             this.btnExportExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.ImageOptions.Image")));
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            toolTipTitleItem2.Text = "Export to Excel";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnExportExcel.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Export to Excel";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnExportExcel.SuperTip = superToolTip1;
             this.btnExportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExportExcel_ItemClick);
             // 
             // barButtonItem2
@@ -820,6 +822,8 @@
             // 
             this.popDetail.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popDetail.AppearanceCaption.Options.UseFont = true;
+            this.popDetail.Controls.Add(this.btnExit);
+            this.popDetail.Controls.Add(this.btnSave);
             this.popDetail.Controls.Add(this.groupControl5);
             this.popDetail.Controls.Add(this.groupControl4);
             this.popDetail.Controls.Add(this.groupControl3);
@@ -827,10 +831,41 @@
             this.popDetail.Controls.Add(this.btnClose);
             this.popDetail.Location = new System.Drawing.Point(40, 55);
             this.popDetail.Name = "popDetail";
-            this.popDetail.Size = new System.Drawing.Size(962, 791);
+            this.popDetail.Size = new System.Drawing.Size(962, 822);
             this.popDetail.TabIndex = 6;
             this.popDetail.Text = "Detail";
             this.popDetail.Visible = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Appearance.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnExit.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.Appearance.BorderColor = System.Drawing.Color.Red;
+            this.btnExit.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnExit.Appearance.Options.UseBackColor = true;
+            this.btnExit.Appearance.Options.UseBorderColor = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnExit.Location = new System.Drawing.Point(523, 776);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(124, 31);
+            this.btnExit.TabIndex = 41;
+            this.btnExit.Text = "CANCEL";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnSave.Appearance.BackColor2 = System.Drawing.Color.Lime;
+            this.btnSave.Appearance.BorderColor = System.Drawing.Color.Green;
+            this.btnSave.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnSave.Appearance.Options.UseBackColor = true;
+            this.btnSave.Appearance.Options.UseBorderColor = true;
+            this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnSave.Location = new System.Drawing.Point(389, 776);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(128, 31);
+            this.btnSave.TabIndex = 40;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupControl5
             // 
@@ -1639,5 +1674,7 @@
         private System.Windows.Forms.TextBox txtANZBusinessCode;
         private System.Windows.Forms.TextBox txtANZCountry;
         private System.Windows.Forms.TextBox txtBeneTranxRefNo;
+        private DevExpress.XtraEditors.SimpleButton btnExit;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
     }
 }

@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BAL.Amlo.Master;
 using DTO.Amlo.Trans;
+using DTO.Util;
 namespace ANZ2AMLO.Forms
 {
     public partial class frmTransactionMaster : DevExpress.XtraEditors.XtraForm
     {
 
         TransactionMasterBAL bal = null;
-        List<TransactionANZ> objResult = null;
+        List<TransactionMasterDTO> objResult = null;
+
+        DataTable dTable = null;
+        DataRow dRow = null;
         public frmTransactionMaster()
         {
             InitializeComponent();
@@ -24,6 +28,14 @@ namespace ANZ2AMLO.Forms
 
         private void frmTransactionMaster_Load(object sender, EventArgs e)
         {
+            InitialData();
+
+            popDetail.Location = new Point((this.MdiParent.ClientSize.Width / 2) - popDetail.Size.Width / 2, popDetail.Location.Y);
+        }
+
+        public void InitialData()
+        {
+
             bal = new TransactionMasterBAL();
             objResult = bal.FindByObjList(null);
             this.gridView1.GridControl.DataSource = objResult;
@@ -36,9 +48,6 @@ namespace ANZ2AMLO.Forms
             gridView1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             gridView1.OptionsView.ColumnAutoWidth = false;
             gridView1.BestFitColumns();
-
-
-            popDetail.Location = new Point((this.MdiParent.ClientSize.Width / 2) - popDetail.Size.Width / 2, popDetail.Location.Y);
         }
 
         private void gdView_Click(object sender, EventArgs e)
@@ -160,6 +169,90 @@ namespace ANZ2AMLO.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             popDetail.Visible = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(MessageDto.SaveMsg, "Saving", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                SaveData();
+            }
+               
+        }
+
+
+        void SaveData()
+        {
+            dTable = TransactionMasterDTO.CreateDataTable();
+
+            dRow = dTable.NewRow();
+
+            dRow["TranOID"]=
+
+            //  dRow["FileType"]=
+            // dRow["GroupName"]=
+            // dRow["ANZCustomerId"]=
+            // dRow["CustRegisterName"]=
+            //  dRow["CustCompanyAddress"]=
+            // dRow["CustCompanyAddressCountry"]=
+            // dRow["CustContractAddress"]=
+            // dRow["CustContractAddressCountry"]=
+            //  dRow["TransactionMethod"]=
+            //  dRow["BeneTranxRefNo"]=
+            // dRow["BeneBankName"]= 
+            //dRow["SendIdType"]=
+            // dRow["SendIdNo"]=
+            // dRow["SendIdIssueBy"]=
+            // dRow["BeneIdNo"]=
+            // dRow["BeneIdIssueBy"]=
+            // dRow["Remark"]=
+            // dRow["MappingSourceDB"] =
+            //dRow["BeneIdType"]=
+            dRow["CustomerInstrumentId"]= txtInstrumentId.Text; // PK
+            dRow["CustomerBankAccountNumber"]= txtBANKAccount.Text; // PK
+          
+            dRow["CustRegisterID"]= txtANZRegisterID.Text;
+            dRow["CustBusinessCode"] = txtANZBusinessCode.Text;
+            dRow["CustRegisterAddress"]= txtANZAddress.Text;
+            dRow["CustRegisterAddressCountry"]= txtANZCountry.Text;
+
+            dRow["CustRegisterDate"]= txtANZRegisterDate.Text;
+   
+            dRow["TransactionDate"] = txtTransactionDate.Text;
+            dRow["TranxAmountThb"]= txtTranxAmountTHB.Text;
+            dRow["TranxAmountCurrency"]=txtANZCountry.Text;
+            dRow["TranxCurrency"]= txtCurrency.Text;
+            dRow["TranxExchangeRate"]= txtExchangeRate.Text;
+            dRow["TranxAmountThbInThWord"]=
+            dRow["TranxInternationalOrDomestic"]=
+            dRow["TranxSendReceive"]= txtTranxSendReceive.Text;
+            dRow["TranxObjective"]= txtObjective.Text;
+            dRow["SendTranxRefNo"] = txtSendTranxRefNo.Text;
+            dRow["SendBankName"]= txtSendBankName.Text;
+            dRow["SendBankCountry"]= txtSendBankCountry.Text;
+            dRow["SendBankAccountNo"] = txtSendAccountNumber.Text;
+            dRow["SendName"]= txtSendName.Text;
+            dRow["SendAddress"]= txtSendAddress.Text;
+            dRow["SendIdDescription"]= txtSendDescription.Text;
+            dRow["BeneBankAccountNo"]= txtBeneAccountNumber.Text;
+            dRow["BeneBankCountry"]= txtBeneBankCountry.Text;
+            dRow["BeneName"]= txtBeneName.Text;
+            dRow["BeneBankName"] = txtBeneBankName.Text;
+            dRow["BeneTranxRefNo"] = txtBeneTranxRefNo.Text;
+            
+            dRow["BeneAddress"] = txtBeneAddress.Text;
+            dRow["BeneIdDescription"]= txtBeneDescription.Text;
+
+            dTable.Rows.Add(dRow);
+
+            bal = new TransactionMasterBAL();
+            if (bal.Add(dTable))
+            {
+                MessageBox.Show(MessageDto.SaveSuccess, "Saving");
+                popDetail.Visible = false;
+                InitialData();
+            }
+
         }
     }
   

@@ -53,7 +53,7 @@ namespace BAL.Amlo.Master
             catch (Exception ex)
             {
 
-                Log("PaymentBAL.Action", "High", ex.ToString());
+                Log("TransactionMasterBAL.Action", "High", ex.ToString());
             }
             finally
             { }
@@ -73,7 +73,7 @@ namespace BAL.Amlo.Master
             return null;
         }
 
-        public List<TransactionANZ> FindByObjList(object dto)
+        public List<TransactionMasterDTO> FindByObjList(object dto)
         {
             return dao.FindByObjList(dto);
             //dt = SourceFile_MappingHeaderDto.Data();
@@ -112,7 +112,7 @@ namespace BAL.Amlo.Master
             catch (Exception ex)
             {
 
-                Log("PaymentBAL.Add", "High", ex.ToString());
+                Log("TransactionMasterBAL.Add", "High", ex.ToString());
             }
             finally
             { }
@@ -120,6 +120,26 @@ namespace BAL.Amlo.Master
 
 
         }
+
+        public  bool Add(DataTable dt)
+        {
+
+            try
+            {
+                isCan = dao.Add(dt);
+            }
+            catch (Exception ex)
+            {
+
+                Log("TransactionMasterBAL.Add", "High", ex.ToString());
+            }
+            finally
+            { }
+            return isCan;
+
+
+        }
+
 
         protected override bool Update()
         {
@@ -131,7 +151,7 @@ namespace BAL.Amlo.Master
             catch (Exception ex)
             {
 
-                Log("PaymentBAL.Update", "High", ex.ToString());
+                Log("TransactionMasterBAL.Update", "High", ex.ToString());
             }
             finally
             { }
@@ -150,7 +170,7 @@ namespace BAL.Amlo.Master
             catch (Exception ex)
             {
 
-                Log("PaymentBAL.Delete", "High", ex.ToString());
+                Log("TransactionMasterBAL.Delete", "High", ex.ToString());
             }
             finally
             { }

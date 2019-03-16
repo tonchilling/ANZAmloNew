@@ -73,7 +73,7 @@ namespace BAL.Amlo.Master
             return null;
         }
 
-        public List<TransactionANZ> FindByObjList(object dto)
+        public List<TransactionMasterDTO> FindByObjList(object dto)
         {
             return dao.FindByObjList(dto);
             //dt = SourceFile_MappingHeaderDto.Data();

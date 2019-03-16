@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImportDataAll));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -74,6 +74,14 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtReportCondtion = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnVerify = new DevExpress.XtraEditors.SimpleButton();
             this.lblStatus = new DevExpress.XtraEditors.LabelControl();
             this.pStatus = new DevExpress.XtraEditors.ProgressBarControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -93,14 +101,6 @@
             this.btnClose = new DevExpress.XtraEditors.ButtonEdit();
             this.gdViewDetail = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnVerify = new DevExpress.XtraEditors.SimpleButton();
-            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -113,6 +113,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtReportCondtion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
@@ -125,8 +127,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdViewDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // barManager1
@@ -217,9 +217,9 @@
             // gdView
             // 
             this.gdView.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gdView.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gdView.Location = new System.Drawing.Point(0, 116);
             this.gdView.MainView = this.gridView1;
             this.gdView.Name = "gdView";
@@ -347,7 +347,7 @@
             this.btnView.AutoHeight = false;
             this.btnView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnView.Name = "btnView";
             this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -508,6 +508,90 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1419, 233);
             this.panelControl2.TabIndex = 10;
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.labelControl12);
+            this.panelControl4.Controls.Add(this.labelControl15);
+            this.panelControl4.Controls.Add(this.labelControl14);
+            this.panelControl4.Controls.Add(this.labelControl13);
+            this.panelControl4.Location = new System.Drawing.Point(851, 96);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(547, 125);
+            this.panelControl4.TabIndex = 18;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl12.Location = new System.Drawing.Point(135, 5);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(45, 32);
+            this.labelControl12.TabIndex = 7;
+            this.labelControl12.Text = "By:";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl15.Location = new System.Drawing.Point(244, 5);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(45, 32);
+            this.labelControl15.TabIndex = 6;
+            this.labelControl15.Text = "By:";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl14.Appearance.Options.UseFont = true;
+            this.labelControl14.Location = new System.Drawing.Point(5, 24);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(62, 13);
+            this.labelControl14.TabIndex = 4;
+            this.labelControl14.Text = "Save State";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Appearance.Options.UseFont = true;
+            this.labelControl13.Location = new System.Drawing.Point(5, 5);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(38, 13);
+            this.labelControl13.TabIndex = 2;
+            this.labelControl13.Text = "Lasted";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Location = new System.Drawing.Point(1228, 18);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(170, 65);
+            this.btnSave.TabIndex = 17;
+            this.btnSave.Text = "Save import State";
+            // 
+            // btnImport
+            // 
+            this.btnImport.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Appearance.Options.UseFont = true;
+            this.btnImport.Location = new System.Drawing.Point(1040, 18);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(170, 65);
+            this.btnImport.TabIndex = 16;
+            this.btnImport.Text = "Import All";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnVerify
+            // 
+            this.btnVerify.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerify.Appearance.Options.UseFont = true;
+            this.btnVerify.Location = new System.Drawing.Point(851, 18);
+            this.btnVerify.Name = "btnVerify";
+            this.btnVerify.Size = new System.Drawing.Size(170, 65);
+            this.btnVerify.TabIndex = 15;
+            this.btnVerify.Text = "Verify Existing File";
             // 
             // lblStatus
             // 
@@ -689,89 +773,6 @@
             this.gridView2.GridControl = this.gdViewDetail;
             this.gridView2.Name = "gridView2";
             // 
-            // btnVerify
-            // 
-            this.btnVerify.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerify.Appearance.Options.UseFont = true;
-            this.btnVerify.Location = new System.Drawing.Point(851, 18);
-            this.btnVerify.Name = "btnVerify";
-            this.btnVerify.Size = new System.Drawing.Size(170, 65);
-            this.btnVerify.TabIndex = 15;
-            this.btnVerify.Text = "Verify Existing File";
-            // 
-            // btnImport
-            // 
-            this.btnImport.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.Appearance.Options.UseFont = true;
-            this.btnImport.Location = new System.Drawing.Point(1040, 18);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(170, 65);
-            this.btnImport.TabIndex = 16;
-            this.btnImport.Text = "Import All";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Location = new System.Drawing.Point(1228, 18);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(170, 65);
-            this.btnSave.TabIndex = 17;
-            this.btnSave.Text = "Save import State";
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.Controls.Add(this.labelControl12);
-            this.panelControl4.Controls.Add(this.labelControl15);
-            this.panelControl4.Controls.Add(this.labelControl14);
-            this.panelControl4.Controls.Add(this.labelControl13);
-            this.panelControl4.Location = new System.Drawing.Point(851, 96);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(547, 125);
-            this.panelControl4.TabIndex = 18;
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(5, 5);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(38, 13);
-            this.labelControl13.TabIndex = 2;
-            this.labelControl13.Text = "Lasted";
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(5, 24);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(62, 13);
-            this.labelControl14.TabIndex = 4;
-            this.labelControl14.Text = "Save State";
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl15.Location = new System.Drawing.Point(244, 5);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(45, 32);
-            this.labelControl15.TabIndex = 6;
-            this.labelControl15.Text = "By:";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl12.Location = new System.Drawing.Point(135, 5);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(45, 32);
-            this.labelControl12.TabIndex = 7;
-            this.labelControl12.Text = "By:";
-            // 
             // frmImportDataAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -802,6 +803,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
@@ -816,9 +820,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdViewDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
