@@ -80,7 +80,14 @@ namespace DAL
         {
             isCan = false;
 
-            parameterList = GetParameterList(procName, dt);
+            if (procName.IndexOf("TRADE-OTL-Detail-CustomerPartyTransactionMapping") > -1)
+            {
+                parameterList = GetParameterListExacly(procName, dt);
+            }
+            else
+            {
+                parameterList = GetParameterList(procName, dt);
+            }
             command = new SqlCommand(procName, connection);
             command.CommandType = CommandType.StoredProcedure;
             foreach (SqlParameter[] param in parameterList)
@@ -403,6 +410,64 @@ namespace DAL
                     }
                     parameterList.Add(paramResultList.ToArray());
                     
+                }
+
+            }
+            catch (Exception ex)
+            { throw ex; }
+            finally
+            { }
+
+            return parameterList;
+
+
+        }
+
+        protected List<SqlParameter[]> GetParameterListExacly(string procName, DataTable dt)
+        {
+            parameterList = new List<SqlParameter[]>();
+            List<SqlParameter> paramList = null;
+            List<SqlParameter> paramResultList = null;
+            SqlParameter[] parameters = null;
+            SqlParameter parameter = null;
+            SqlParameter newParameter = null;
+            try
+            {
+                paramResultList = new List<SqlParameter>();
+                command = new SqlCommand(procName, connection);
+                command.CommandType = CommandType.StoredProcedure;
+                SqlCommandBuilder.DeriveParameters(command);
+                parameters = new SqlParameter[command.Parameters.Count];
+                command.Parameters.CopyTo(parameters, 0);
+                command.Parameters.Clear();
+                paramList = new List<SqlParameter>();
+                paramList.AddRange(parameters);
+                paramList.RemoveAt(0);
+
+
+                foreach (SqlParameter param in paramList)
+                {
+                    param.Value = "";
+                }
+                foreach (DataRow dr in dt.Rows)
+                {
+                    paramResultList = new List<SqlParameter>();
+                    foreach (DataColumn dc in dt.Columns)
+                    {
+                        parameter = paramList.Find(delegate (SqlParameter p)
+                        {
+                            return p.ParameterName.Equals(string.Format("@{0}", dc.ColumnName));
+                        });
+
+                        if (parameter != null)
+                        {
+                            parameter.Value = dr[dc];
+
+                            paramResultList.Add(new SqlParameter(parameter.ParameterName, parameter.Value));
+                        }
+                    }
+                    parameterList.Add(paramResultList.ToArray());
+
                 }
 
             }
