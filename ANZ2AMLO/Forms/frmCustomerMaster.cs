@@ -481,6 +481,41 @@ namespace ANZ1AMLO.Forms
             popupContainerControl3.Show();
             popupContainerControl3.BringToFront();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (validateData())
+            {
+                splashScreenManager1.ShowWaitForm();
+                ActionStep1();
+            }
+        }
+
+        private void btnSaveEditCustAddress_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSaveEditCustAcc_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSaveAddress_Click(object sender, EventArgs e)
+        {
+            string message = ActionConfirm.Update.Value;
+            if (MessageBox.Show(MessageDto.SaveMsg, ".:Customer Address", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                custAddressRowEdit["PrincipleAddress"] = txtPrincipleAddress.Text;
+                custAddressRowEdit["City"] = txtCity.Text;
+                custAddressRowEdit["State"] = txtState.Text;
+                custAddressRowEdit["Zipcode"] = txtZipcode.Text;
+                custAddressRowEdit["Country"] = txtCountry.Text;
+                custAddressRowEdit["ContactNumber"] = txtContactNumber.Text;
+
+                popupContainerControl3.Hide();
+            }
+        }
     }
   
 }
