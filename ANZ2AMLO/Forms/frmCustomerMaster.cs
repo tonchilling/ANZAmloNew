@@ -11,6 +11,8 @@ using DevExpress.XtraEditors;
 using ANZ2AMLO.Forms;
 using BAL.Amlo.Master;
 using DTO.Amlo.Master;
+using DTO.Amlo.Autorizing;
+using DTO.Util;
 
 namespace ANZ1AMLO.Forms
 {
@@ -19,6 +21,9 @@ namespace ANZ1AMLO.Forms
         M_CustomerBAL bal = null;
         List<M_CustomerDTO> customerObjList = null;
         M_CustomerDTO objSearh = null;
+        string oid = "";
+        DataRow custAccRowEdit = null;
+        DataRow custAddressRowEdit = null;
         public frmCustomerMaster()
         {
             InitializeComponent();
@@ -288,7 +293,7 @@ namespace ANZ1AMLO.Forms
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            string oid= gridView1.GetFocusedRowCellValue("CustomerOID").ToString();
+            oid= gridView1.GetFocusedRowCellValue("CustomerOID").ToString();
             txtCustomerID.Text = gridView1.GetFocusedRowCellValue("CustomerID").ToString();
             txtCustomerName.Text= gridView1.GetFocusedRowCellValue("CustomerName").ToString();
             txtCustomerNO.Text = gridView1.GetFocusedRowCellValue("CustomerNo").ToString();
@@ -333,6 +338,148 @@ namespace ANZ1AMLO.Forms
         private void linkOutput_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(@"D:\ANZ\Output");
+        }
+
+        private void btnSaveCust_Click(object sender, EventArgs e)
+        {
+            if (validateData())
+            {
+                splashScreenManager1.ShowWaitForm();
+                ActionStep1();
+            }
+        }
+
+        private void btnSaveCust_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        bool validateData()
+        {
+            bool isValidate = true;
+            StringBuilder msg = new StringBuilder();
+
+            if (txtCustomerNO.Text.Equals(""))
+            {
+                msg.AppendLine("- Please input Customer No.");
+                isValidate = false;
+            }
+            
+            if (!isValidate)
+            {
+                MessageBox.Show(msg.ToString(), "Customer Validation");
+            }
+
+            return isValidate;
+        }
+
+        void ActionStep1()
+        {
+            DataTable custTb = M_CustomerDTO.DataTable();
+            DataRow custDr = custTb.NewRow();
+            custDr["CustomerOID"] = oid;
+            custDr["CustomerID"] = txtCustomerID.Text;
+            custDr["CustomerNo"] = txtCustomerNO.Text;
+            custDr["RegBusinessName"] = txtRegBusinessName.Text;
+            custDr["RegBusinessNameTH"] = txtRegBusinessNameTH.Text;
+            custDr["CustomerName"] = txtCustomerName.Text;
+            custDr["JuristicIDNo"] = txtJuristicIDNo.Text;
+            custDr["RegisterDate"] = txtRegisterDate.Text;
+            custDr["PrimaryBusinessTypeCode"] = txtPrimaryBusinessType.Text;
+            custDr["UPDATE_BY"] = "System";//MyLogin.USER_LOGIN;
+            custTb.Rows.Add(custDr);
+            
+            string message = ActionConfirm.Update.Value;
+            
+            if (MessageBox.Show(message, ".:Customer Master", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ActionStep2(custTb, (DataTable)gdAccount.DataSource, (DataTable)gdAddress.DataSource);
+                LoadData();
+            }
+            else
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
+        }
+
+        void ActionStep2(DataTable custTb, DataTable custAccTb, DataTable custAddressTb)
+        {
+            if (bal.Update(custTb, custAccTb, custAddressTb))
+            {
+                splashScreenManager1.CloseWaitForm();
+                string message = ActionDone.Update.Value;
+                MessageBox.Show(message, ".:Customer Master");
+
+                popupContainerControl1.Hide();
+            }
+            else
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
+        }
+
+        private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            custAccRowEdit = gridCustAccountResult.GetFocusedDataRow();
+            txtAccountNumber.Text = custAccRowEdit["AccountNumber"].ToString();
+            txtCurrencyCode.Text = custAccRowEdit["CurrencyCode"].ToString();
+            txtAccountType.Text = custAccRowEdit["AccountType"].ToString();
+            txtSourceBankBranch.Text = custAccRowEdit["SourceBankBranch"].ToString();
+            popupContainerControl2.Show();
+            popupContainerControl2.BringToFront();
+        }
+
+        private void btnSaveEditCustAcc_Click(object sender, EventArgs e)
+        {
+            string message = ActionConfirm.Update.Value;
+            if (MessageBox.Show(message, ".:Customer Account", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                custAccRowEdit["AccountNumber"] = txtAccountNumber.Text;
+                custAccRowEdit["CurrencyCode"] = txtCurrencyCode.Text;
+                custAccRowEdit["AccountType"] = txtAccountType.Text;
+                custAccRowEdit["SourceBankBranch"] = txtSourceBankBranch.Text;
+
+                popupContainerControl2.Hide();
+            }
+        }
+
+        private void btnCloseEditCustAcc_Click(object sender, EventArgs e)
+        {
+            popupContainerControl2.Hide();
+        }
+
+        private void btnSaveEditCustAddress_Click(object sender, EventArgs e)
+        {
+            string message = ActionConfirm.Update.Value;
+            if (MessageBox.Show(message, ".:Customer Address", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                custAddressRowEdit["PrincipleAddress"] = txtPrincipleAddress.Text;
+                custAddressRowEdit["City"] = txtCity.Text;
+                custAddressRowEdit["State"] = txtState.Text;
+                custAddressRowEdit["Zipcode"] = txtZipcode.Text;
+                custAddressRowEdit["Country"] = txtCountry.Text;
+                custAddressRowEdit["ContactNumber"] = txtContactNumber.Text;
+
+                popupContainerControl3.Hide();
+            }
+        }
+
+        private void btnCloseEditCustAddress_Click(object sender, EventArgs e)
+        {
+            popupContainerControl3.Hide();
+        }
+
+        private void btnEditAddress_Click(object sender, EventArgs e)
+        {
+            custAddressRowEdit = gridCustAddressResult.GetFocusedDataRow();
+            txtPrincipleAddress.Text = custAddressRowEdit["PrincipleAddress"].ToString();
+            txtCity.Text = custAddressRowEdit["City"].ToString();
+            txtState.Text = custAddressRowEdit["State"].ToString();
+            txtZipcode.Text = custAddressRowEdit["Zipcode"].ToString();
+            txtCountry.Text = custAddressRowEdit["Country"].ToString();
+            txtContactNumber.Text = custAddressRowEdit["ContactNumber"].ToString();
+            popupContainerControl3.Show();
+            popupContainerControl3.BringToFront();
         }
     }
   

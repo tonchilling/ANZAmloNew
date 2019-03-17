@@ -169,5 +169,20 @@ namespace BAL.Amlo.Master
             dt.Rows.Add(dr);
             return dao.FindAccountAndAddress(dt);
         }
+
+        public bool Update(DataTable custTb, DataTable custAccTb, DataTable custAddressTb)
+        {
+            bool isCan = false;
+            try
+            {
+                dao.Update(custTb, custAccTb, custAddressTb);
+                isCan = true;
+            }
+            catch (Exception ex)
+            {
+                Log("M_CustomerBAL.Update", "High", ex.ToString());
+            }
+            return isCan;
+        }
     }
 }

@@ -108,5 +108,49 @@ namespace DAL.Amlo.Master
             }
             return dtObj;
         }
+
+        public void Update(DataTable custTb, DataTable custAccTb, DataTable custAddressTb)
+        {
+            SqlConnection conn = null;
+            SqlTransaction transaction = null;
+
+            try
+            {
+                conn = OpenConection();
+                transaction = conn.BeginTransaction();
+
+                ExcecuteNoneQuery("sp_M_Customer_Update", conn, transaction, custTb);
+
+                if(custAccTb != null)
+                {
+                    foreach(DataRow custAccDr in custAccTb.Rows)
+                    {
+                        DataTable custAccTmpDt = custAccTb.Clone();
+                        custAccTmpDt.ImportRow(custAccDr);
+                        ExcecuteNoneQuery("sp_M_Customer_Account_Update", conn, transaction, custAccTmpDt);
+                    }
+                }
+                if(custAddressTb != null)
+                {
+                    foreach (DataRow custAddressDr in custAddressTb.Rows)
+                    {
+                        DataTable custAddressTmpDt = custAddressTb.Clone();
+                        custAddressTmpDt.ImportRow(custAddressDr);
+                        ExcecuteNoneQuery("sp_M_Customer_Address_Update", conn, transaction, custAddressTmpDt);
+                    }
+                }
+                
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
     }
 }
