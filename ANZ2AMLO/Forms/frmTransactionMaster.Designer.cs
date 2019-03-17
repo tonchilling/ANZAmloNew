@@ -103,7 +103,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ANZ2AMLO.Forms.WaitForm1), true, true);
-            this.btnClose = new DevExpress.XtraEditors.ButtonEdit();
             this.popDetail = new DevExpress.XtraEditors.GroupControl();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -167,6 +166,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtGroupName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdView)).BeginInit();
@@ -175,7 +175,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonth.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popDetail)).BeginInit();
             this.popDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -801,34 +800,17 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
-            // btnClose
-            // 
-            this.btnClose.EditValue = "CLOSE";
-            this.btnClose.Location = new System.Drawing.Point(922, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnClose.Properties.Appearance.Options.UseFont = true;
-            this.btnClose.Properties.AutoHeight = false;
-            this.btnClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.btnClose.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close)});
-            this.btnClose.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnClose.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnClose.Size = new System.Drawing.Size(36, 26);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // popDetail
             // 
             this.popDetail.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popDetail.AppearanceCaption.Options.UseFont = true;
+            this.popDetail.Controls.Add(this.btnClose);
             this.popDetail.Controls.Add(this.btnExit);
             this.popDetail.Controls.Add(this.btnSave);
             this.popDetail.Controls.Add(this.groupControl5);
             this.popDetail.Controls.Add(this.groupControl4);
             this.popDetail.Controls.Add(this.groupControl3);
             this.popDetail.Controls.Add(this.groupControl2);
-            this.popDetail.Controls.Add(this.btnClose);
             this.popDetail.Location = new System.Drawing.Point(40, 55);
             this.popDetail.Name = "popDetail";
             this.popDetail.Size = new System.Drawing.Size(962, 822);
@@ -1502,6 +1484,16 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Group Name";
             // 
+            // btnClose
+            // 
+            this.btnClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnClose.Location = new System.Drawing.Point(927, -1);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(39, 32);
+            this.btnClose.TabIndex = 45;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmTransactionMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1526,7 +1518,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonth.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popDetail)).EndInit();
             this.popDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -1612,7 +1603,6 @@
         private System.Windows.Forms.DateTimePicker dtTranDate;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.Windows.Forms.LinkLabel linkOutput;
-        private DevExpress.XtraEditors.ButtonEdit btnClose;
         private DevExpress.XtraEditors.GroupControl popDetail;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.Label label6;
@@ -1676,5 +1666,6 @@
         private System.Windows.Forms.TextBox txtBeneTranxRefNo;
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton btnClose;
     }
 }
