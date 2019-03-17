@@ -386,7 +386,7 @@ namespace ANZ1AMLO.Forms
             custDr["JuristicIDNo"] = txtJuristicIDNo.Text;
             custDr["RegisterDate"] = txtRegisterDate.Text;
             custDr["PrimaryBusinessTypeCode"] = txtPrimaryBusinessType.Text;
-            custDr["UPDATE_BY"] = "System";//MyLogin.USER_LOGIN;
+            custDr["UPDATE_BY"] = MyLogin.USER_LOGIN;
             custTb.Rows.Add(custDr);
             
             string message = ActionConfirm.Update.Value;
@@ -438,6 +438,7 @@ namespace ANZ1AMLO.Forms
                 custAccRowEdit["CurrencyCode"] = txtCurrencyCode.Text;
                 custAccRowEdit["AccountType"] = txtAccountType.Text;
                 custAccRowEdit["SourceBankBranch"] = txtSourceBankBranch.Text;
+                custAccRowEdit["UPDATE_BY"] = MyLogin.USER_LOGIN;
 
                 popupContainerControl2.Hide();
             }
@@ -459,7 +460,7 @@ namespace ANZ1AMLO.Forms
                 custAddressRowEdit["Zipcode"] = txtZipcode.Text;
                 custAddressRowEdit["Country"] = txtCountry.Text;
                 custAddressRowEdit["ContactNumber"] = txtContactNumber.Text;
-
+                custAddressRowEdit["UPDATE_BY"] = MyLogin.USER_LOGIN;
                 popupContainerControl3.Hide();
             }
         }
