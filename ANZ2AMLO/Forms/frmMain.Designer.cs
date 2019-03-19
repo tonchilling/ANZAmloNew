@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ANZ2AMLO.Forms.frmSplashScreen), false, false);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -90,10 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnLogin)).BeginInit();
             this.pnLogin.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 5000;
             // 
             // xtraTabbedMdiManager1
             // 
@@ -215,9 +210,9 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 644);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 657);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(975, 38);
+            this.barDockControlBottom.Size = new System.Drawing.Size(975, 25);
             // 
             // barDockControlLeft
             // 
@@ -225,7 +220,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 620);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 633);
             // 
             // barDockControlRight
             // 
@@ -233,11 +228,11 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(975, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 620);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 633);
             // 
             // navBarControlMain
             // 
-            this.navBarControlMain.ActiveGroup = this.navBarGroup1;
+            this.navBarControlMain.ActiveGroup = this.navBarGroup2;
             this.navBarControlMain.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.navBarControlMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControlMain.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
@@ -273,7 +268,7 @@
             this.navBarControlMain.Location = new System.Drawing.Point(0, 24);
             this.navBarControlMain.Name = "navBarControlMain";
             this.navBarControlMain.OptionsNavPane.ExpandedWidth = 214;
-            this.navBarControlMain.Size = new System.Drawing.Size(214, 620);
+            this.navBarControlMain.Size = new System.Drawing.Size(214, 633);
             this.navBarControlMain.TabIndex = 5;
             this.navBarControlMain.Text = "navBarControl1";
             this.navBarControlMain.View = new DevExpress.XtraNavBar.ViewInfo.SkinNavigationPaneViewInfoRegistrator();
@@ -282,7 +277,6 @@
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Souce Data Management";
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsText;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navImportAll),
@@ -364,6 +358,7 @@
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "Process Setting";
+            this.navBarGroup2.Expanded = true;
             this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.LargeIconsList;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navSourceFileConfig),
@@ -373,7 +368,6 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navReportMapping),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navReportFilterRole)});
             this.navBarGroup2.Name = "navBarGroup2";
-            this.navBarGroup2.TopVisibleLinkIndex = 1;
             // 
             // navSourceFileConfig
             // 
