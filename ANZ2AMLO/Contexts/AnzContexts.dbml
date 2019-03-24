@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbanz2amlo" Class="AnzContextsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=158.58.172.18;Initial Catalog=dbanz2amlo;Persist Security Info=True;User ID=sa" SettingsObjectName="ANZ2AMLO.Properties.Settings" SettingsPropertyName="dbanz2amloConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ANSAmlo" Class="AnzContextsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=ANSAmlo;Persist Security Info=True;User ID=sa" SettingsObjectName="ANZ2AMLO.Properties.Settings" SettingsPropertyName="dbanz2amloConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.unloading" Member="unloadings">
     <Type Name="unloading">
       <Column Name="unload_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -29,6 +29,764 @@
       <Column Name="un_doc_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ob_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="unload_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer_MappingDetail" Member="Customer_MappingDetails">
+    <Type Name="Customer_MappingDetail">
+      <Column Name="DID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ExampleValue" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CM_Require" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Link_Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Priority1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Priority2" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Priority3" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Customer_MappingHeader_Customer_MappingDetail" Member="Customer_MappingHeader" ThisKey="HID" OtherKey="HID" Type="Customer_MappingHeader" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_PurposeCode" Member="Temp_PurposeCodes">
+    <Type Name="Temp_PurposeCode">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PurposeCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PurposeDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InternalBOTCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Deposit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Withdraw" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColJ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColK" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PurposeDescriptionTH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer_MappingHeader" Member="Customer_MappingHeaders">
+    <Type Name="Customer_MappingHeader">
+      <Column Name="HID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReportName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Customer_MappingHeader_Customer_MappingDetail" Member="Customer_MappingDetails" ThisKey="HID" OtherKey="HID" Type="Customer_MappingDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_Customer" Member="M_Customers">
+    <Type Name="M_Customer">
+      <Column Name="CustomerOID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerNo" Type="System.String" DbType="NVarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="RegBusinessName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RegBusinessNameTH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="JuristicIDNo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RegisterDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="PrimaryBusinessTypeCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="SourceFile_MappingDetailID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ImportID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_Customer_Account" Member="M_Customer_Accounts">
+    <Type Name="M_Customer_Account">
+      <Column Name="CustomerAccOID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerOID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SourceBankBranch" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_Customer_Address" Member="M_Customer_Addresses">
+    <Type Name="M_Customer_Address">
+      <Column Name="AddressOID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerKYCID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerOID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PrincipleAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zipcode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_Import_TempConfigD" Member="M_Import_TempConfigDs">
+    <Type Name="M_Import_TempConfigD">
+      <Column Name="DID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileColNumber" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FileColName" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="InColNumber" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InColName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Desc]" Member="Desc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.M_Import_TempConfigH" Member="M_Import_TempConfigHs">
+    <Type Name="M_Import_TempConfigH">
+      <Column Name="HID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Desc]" Member="Desc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PER_MENU" Member="PER_MENUs">
+    <Type Name="PER_MENU">
+      <Column Name="MENU_OID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OrderNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MENUGROUP_OID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[DESC]" Member="DESC" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="SCREEN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LINK" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PMENU_OID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PER_MENU_PERMISSION" Member="PER_MENU_PERMISSIONs">
+    <Type Name="PER_MENU_PERMISSION">
+      <Column Name="USERGROUP_OID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MENU_OID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[VIEW]" Member="VIEW" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[DELETE]" Member="DELETE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EDIT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PER_MENUGROUP" Member="PER_MENUGROUPs">
+    <Type Name="PER_MENUGROUP">
+      <Column Name="MENUGROUP_OID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[DESC]" Member="DESC" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="SCREEN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LINK" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PER_USER" Member="PER_USERs">
+    <Type Name="PER_USER">
+      <Column Name="USER_OID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USERGROUP_OID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="USER_LOGIN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Addr1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Telephone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MAX_SESSION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SESSION_TIME_OUT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PER_USERGROUP" Member="PER_USERGROUPs">
+    <Type Name="PER_USERGROUP">
+      <Column Name="USERGROUP_OID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[Desc]" Member="Desc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SourceFile_MappingDetail" Member="SourceFile_MappingDetails">
+    <Type Name="SourceFile_MappingDetail">
+      <Column Name="DID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SourceFileRefName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="KeyWord" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ExtFile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StartRow" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EndRow" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StartColumn" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SourceFile_MappingDetail_Column" Member="SourceFile_MappingDetail_Columns">
+    <Type Name="SourceFile_MappingDetail_Column">
+      <Column Name="DID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColumnNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColumnExcel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColumnName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Condition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalRow" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartPosition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PositionLength" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Desc]" Member="Desc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SourceFile_MappingHeader" Member="SourceFile_MappingHeaders">
+    <Type Name="SourceFile_MappingHeader">
+      <Column Name="HID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReportName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Condition1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Condition2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Condition3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Condition4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Desc]" Member="Desc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ImportFolder" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="BackUpFolder" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LogFolder" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="OutputFolder" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_ImportDetail" Member="T_ImportDetails">
+    <Type Name="T_ImportDetail">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SourceFileHID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SourceFileDID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FilesCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileNameList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HasImport" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ImportStatus" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ImportedRec" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalRec" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_ImportHeader" Member="T_ImportHeaders">
+    <Type Name="T_ImportHeader">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SourceFileHID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranDate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ReportName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Incoming" Member="T_Incomings">
+    <Type Name="T_Incoming">
+      <Column Name="T_IncomingOID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="am_transactionmethod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="am_customeraccno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="relationship" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="legalpersonid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="businesstype_code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="address2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="zipcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="countrycode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="issuedate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tsc_date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="valueinbaht" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="curr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="exchangerate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="valueinbahttxt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="transtype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="refno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="org" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="orgcountry" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idtype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idtypedesc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idissuer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxObjective" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="record_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Outgoing" Member="T_Outgoings">
+    <Type Name="T_Outgoing">
+      <Column Name="T_OutgoingOID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="am_transactionmethod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="am_customeraccno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="relationship" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="legalpersonid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="businesstype_code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="address2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="zipcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="countrycode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="issuedate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tsc_date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="valueinbaht" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="curr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="exchangerate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="valueinbahttxt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="transtype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="refno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="org" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="orgcountry" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idtype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idtypedesc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idissuer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxObjective" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="record_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Transaction" Member="T_Transactions">
+    <Type Name="T_Transaction">
+      <Column Name="TranOID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FileType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerInstrumentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerBankAccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ANZCustomerId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustRegisterName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustRegisterID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustBusinessCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustRegisterAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustRegisterAddressCountry" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustCompanyAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustCompanyAddressCountry" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustContractAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustContractAddressCountry" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustRegisterDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransactionMethod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransactionDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxAmountThb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxAmountCurrency" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxCurrency" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxExchangeRate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxAmountThbInThWord" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxInternationalOrDomestic" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxSendReceive" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxObjective" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendTranxRefNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendBankName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendBankCountry" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendBankAccountNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SendIdType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendIdDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendIdNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SendIdIssueBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneBankAccountNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneTranxRefNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneBankName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneBankCountry" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneIdType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneIdDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneIdNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneIdIssueBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MappingSourceDB" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_BankMaster" Member="Temp_BankMasters">
+    <Type Name="Temp_BankMaster">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ZipCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelephoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FaxNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankCode1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GenericBranchCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_BusinessType" Member="Temp_BusinessTypes">
+    <Type Name="Temp_BusinessType">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Detail1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detail2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detail3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detail4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detail5" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Report" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SubCategory" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubActivity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ISICDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Parent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Supplier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Service" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WholeSale" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RetailSale" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_Counterrate" Member="Temp_Counterrates">
+    <Type Name="Temp_Counterrate">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Currency" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ExportSightBill" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelexTransfer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelexTransferandDraft" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_CountryCode" Member="Temp_CountryCodes">
+    <Type Name="Temp_CountryCode">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_Customer_Account_Numbers" Member="Temp_Customer_Account_Numbers">
+    <Type Name="Temp_Customer_Account_Number">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CountryDomicileShortDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustomerTypeShortDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AcctNumberCurrCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AcctNumberDefaultInd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SourceBankBranch" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OperationalBankOrgId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_DATA_EXT" Member="Temp_DATA_EXTs">
+    <Type Name="Temp_DATA_EXT">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UniqueIdentifier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DocumentType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DocumentNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PrincipleAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Zipcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContactNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelationshipType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedCustomerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelcustomerKYCID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelCustomerStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelCustDocumenttype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelCustDocumentnumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Issuedate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ExpirDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_Incoming" Member="Temp_Incomings">
+    <Type Name="Temp_Incoming">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransactionCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstrumentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransactionDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurrecyCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurrAmount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PayerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ANZAccountNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PayerAddress1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PayerAddress2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PayerAddress3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PayerBankName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneBankName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneBankAddress1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneBankAddress2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneBankAddress3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneAccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneAddress1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneAddress2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneAddress3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PuposeDescription1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PuposeDescription2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PuposeDescription3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_IPI" Member="Temp_IPIs">
+    <Type Name="Temp_IPI">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastedAmenddate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CNAME" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CountryofResidence" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PrimaryBusinessType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SWIFTCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvolvedPartyType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegisteredBusinessName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TaxIdentificationNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OtherIdentificationNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UniqueIdType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TitleEng" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TitleThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FirstNameEng" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="FirstNameThai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MiddleNameThai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MiddleNameEng" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastNameEng" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastNameThai" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PersonalIdentificationNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PassportNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BOIFlag" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JuristicIdentificationNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JuristicRegisteredDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegisteredBusinessNameThai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedInvolvedPartyId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedUniqueIdType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IPRelationshipType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BusinessSize" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_Outgoing" Member="Temp_Outgoings">
+    <Type Name="Temp_Outgoing">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransactionCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstrumentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TransactionDate" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CurrecyCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CurrAmount" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ANZAccountNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PayerName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PayerAddress1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PayerAddress2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PayerAddress3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneBankName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneAccountNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneAddress1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneAddress2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneAddress3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PuposeDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_Party_Details_Prompt" Member="Temp_Party_Details_Prompts">
+    <Type Name="Temp_Party_Details_Prompt">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReportActivityDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ActivityDetailTypeShortDesc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InstrumentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OperationalBankOrgId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelationshipCustomerInformatio" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PartyCustomerId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BusinessName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CountryDomicileShortDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AddressLine1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AddressLine2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AddressLine3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PartyTypeShortDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Reference" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Temp_Payment_-_Op_Org_Prompt]" Member="Temp_Payment___Op_Org_Prompts">
+    <Type Name="Temp_Payment___Op_Org_Prompt">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OperationalBankOrgId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReportActivityDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WorkItemNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstrumentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedInstrument" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedInstrumentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LinkedInstrumentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstrumentCurrency" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AmountBase" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CountryDomicile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ActivityTypeShortDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WorkItemTypeShortDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temp_Payment_Release" Member="Temp_Payment_Releases">
+    <Type Name="Temp_Payment_Release">
+      <Column Name="ImportID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstrumentId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OrderingParty" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneficiaryAccountNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneficiaryName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneficiaryAddress1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneficiaryAddress2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneficiaryAddress3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BeneficiaryBank" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneficiaryBankName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="InstrumentCurrency" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BeneficiaryAmount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ValueDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateTimeHistoryStatusCreated" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentMethodTypeDescription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CentralBankReporting1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CentralBankReporting2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CentralBankReporting3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FXRate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_IncomingAndOutgoing" Member="View_IncomingAndOutgoings">
+    <Type Name="View_IncomingAndOutgoing">
+      <Column Name="DataType" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="T_OutgoingOID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="am_transactionmethod" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="am_customeraccno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="relationship" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="legalpersonid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="businesstype_code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="address2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="zipcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="countrycode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="issuedate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tsc_date" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="valueinbaht" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="curr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="exchangerate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="valueinbahttxt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="transtype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="refno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="org" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="orgcountry" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="accountno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fullname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idtype" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idtypedesc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idissuer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TranxObjective" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="record_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ROW_STATE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

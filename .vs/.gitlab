@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 2932235,
+    "Username": "ateerayut",
+    "Name": "Teerayut Auttawong",
+    "Email": "ateerayut@gmail.com",
+    "AvatarUrl": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/2932235/avatar.png",
+    "PrivateToken": "b3a25c05d58b57a14bf9d33b3c74081a563defd14b5af13eaedaac4e9e4bef62",
+    "Host": "https://gitlab.com",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}

@@ -66,8 +66,8 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barGenXML = new DevExpress.XtraBars.BarButtonItem();
+            this.barExport = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -76,7 +76,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtOutput = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.checkEdit4 = new DevExpress.XtraEditors.CheckEdit();
             this.checkEdit5 = new DevExpress.XtraEditors.CheckEdit();
@@ -93,7 +93,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOutput.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
@@ -105,7 +105,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(12, 25);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(254, 13);
+            this.labelControl1.Size = new System.Drawing.Size(252, 13);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Lasted Generate  Date : 15/10/2018 Time : 14:00:31";
             // 
@@ -352,7 +352,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(12, 6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(83, 13);
+            this.labelControl2.Size = new System.Drawing.Size(92, 13);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "GENERATE AMLO";
             // 
@@ -377,8 +377,8 @@
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
-            this.barButtonItem4,
-            this.barButtonItem5});
+            this.barGenXML,
+            this.barExport});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 5;
             // 
@@ -389,31 +389,30 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barGenXML),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barExport),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
-            // barButtonItem4
+            // barGenXML
             // 
-            this.barButtonItem4.Caption = "Generate";
-            this.barButtonItem4.Id = 3;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            this.barGenXML.Caption = "Generate";
+            this.barGenXML.Id = 3;
+            this.barGenXML.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barGenXML.ImageOptions.Image")));
+            this.barGenXML.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barGenXML.ImageOptions.LargeImage")));
+            this.barGenXML.Name = "barGenXML";
+            this.barGenXML.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barGenXML.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barGenXML_ItemClick);
             // 
-            // barButtonItem5
+            // barExport
             // 
-            this.barButtonItem5.Caption = "Export";
-            this.barButtonItem5.Id = 4;
-            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            this.barExport.Caption = "Export";
+            this.barExport.Id = 4;
+            this.barExport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barExport.ImageOptions.Image")));
+            this.barExport.Name = "barExport";
+            this.barExport.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // barButtonItem2
             // 
@@ -461,7 +460,7 @@
             // 
             this.panelControl2.Controls.Add(this.simpleButton1);
             this.panelControl2.Controls.Add(this.labelControl6);
-            this.panelControl2.Controls.Add(this.textEdit1);
+            this.panelControl2.Controls.Add(this.txtOutput);
             this.panelControl2.Controls.Add(this.labelControl3);
             this.panelControl2.Controls.Add(this.checkEdit4);
             this.panelControl2.Controls.Add(this.checkEdit5);
@@ -483,28 +482,29 @@
             this.simpleButton1.Size = new System.Drawing.Size(131, 23);
             this.simpleButton1.TabIndex = 15;
             this.simpleButton1.Text = "Open Folder";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(32, 138);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(73, 13);
+            this.labelControl6.Size = new System.Drawing.Size(70, 13);
             this.labelControl6.TabIndex = 14;
             this.labelControl6.Text = "Report Folder :";
             // 
-            // textEdit1
+            // txtOutput
             // 
-            this.textEdit1.Location = new System.Drawing.Point(111, 135);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(466, 20);
-            this.textEdit1.TabIndex = 13;
+            this.txtOutput.Location = new System.Drawing.Point(111, 135);
+            this.txtOutput.MenuManager = this.barManager1;
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.Size = new System.Drawing.Size(466, 20);
+            this.txtOutput.TabIndex = 13;
             // 
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(222, 25);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(93, 13);
+            this.labelControl3.Size = new System.Drawing.Size(89, 13);
             this.labelControl3.TabIndex = 12;
             this.labelControl3.Text = "Generate Interface";
             // 
@@ -557,7 +557,7 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(32, 25);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(81, 13);
+            this.labelControl5.Size = new System.Drawing.Size(79, 13);
             this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Generate Report";
             // 
@@ -565,7 +565,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(12, 6);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(132, 13);
+            this.labelControl4.Size = new System.Drawing.Size(127, 13);
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "Report & Interface Generate";
             // 
@@ -594,7 +594,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOutput.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
@@ -635,7 +635,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barGenXML;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -646,7 +646,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtOutput;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.CheckEdit checkEdit4;
         private DevExpress.XtraEditors.CheckEdit checkEdit5;
@@ -655,6 +655,6 @@
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem barExport;
     }
 }

@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm000ReportWorkFlowStatus));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.colUpdateDateTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -53,7 +53,6 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colReportName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnView = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colEndTransactionDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmountTHB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,17 +61,20 @@
             this.colHID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAction = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colReport = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnView = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditTransaction = new DevExpress.XtraEditors.DateEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.searchLookUpEditReportName = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtTtansactionAmt = new DevExpress.XtraEditors.SpinEdit();
+            this.cmdSearch = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -80,11 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTransaction.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTransaction.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEditReportName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTtansactionAmt.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // colUpdateDateTime
@@ -94,7 +97,7 @@
             this.colUpdateDateTime.Name = "colUpdateDateTime";
             this.colUpdateDateTime.Visible = true;
             this.colUpdateDateTime.VisibleIndex = 9;
-            this.colUpdateDateTime.Width = 185;
+            this.colUpdateDateTime.Width = 180;
             // 
             // barButtonItem3
             // 
@@ -148,6 +151,7 @@
             this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -205,14 +209,14 @@
             this.colLastedUpdateBy.Name = "colLastedUpdateBy";
             this.colLastedUpdateBy.Visible = true;
             this.colLastedUpdateBy.VisibleIndex = 8;
-            this.colLastedUpdateBy.Width = 50;
+            this.colLastedUpdateBy.Width = 48;
             // 
             // gdView
             // 
             this.gdView.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdView.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gdView.Location = new System.Drawing.Point(0, 167);
             this.gdView.MainView = this.gridView1;
             this.gdView.Name = "gdView";
@@ -259,22 +263,12 @@
             // 
             this.colReportName.Caption = "Report Name";
             this.colReportName.FieldName = "colReportName";
-            this.colReportName.MaxWidth = 80;
+            this.colReportName.MaxWidth = 150;
             this.colReportName.MinWidth = 50;
             this.colReportName.Name = "colReportName";
             this.colReportName.Visible = true;
             this.colReportName.VisibleIndex = 1;
             this.colReportName.Width = 80;
-            // 
-            // btnView
-            // 
-            this.btnView.AutoHeight = false;
-            this.btnView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnView.Name = "btnView";
-            this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // colEndTransactionDate
             // 
@@ -284,7 +278,7 @@
             this.colEndTransactionDate.Name = "colEndTransactionDate";
             this.colEndTransactionDate.Visible = true;
             this.colEndTransactionDate.VisibleIndex = 2;
-            this.colEndTransactionDate.Width = 102;
+            this.colEndTransactionDate.Width = 120;
             // 
             // colAmountTHB
             // 
@@ -295,7 +289,7 @@
             this.colAmountTHB.Name = "colAmountTHB";
             this.colAmountTHB.Visible = true;
             this.colAmountTHB.VisibleIndex = 3;
-            this.colAmountTHB.Width = 100;
+            this.colAmountTHB.Width = 97;
             // 
             // colStatus
             // 
@@ -339,7 +333,7 @@
             this.colAction.Name = "colAction";
             this.colAction.Visible = true;
             this.colAction.VisibleIndex = 6;
-            this.colAction.Width = 154;
+            this.colAction.Width = 150;
             // 
             // colReport
             // 
@@ -348,7 +342,17 @@
             this.colReport.Name = "colReport";
             this.colReport.Visible = true;
             this.colReport.VisibleIndex = 7;
-            this.colReport.Width = 154;
+            this.colReport.Width = 150;
+            // 
+            // btnView
+            // 
+            this.btnView.AutoHeight = false;
+            this.btnView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnView.Name = "btnView";
+            this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // panelControl2
             // 
@@ -360,10 +364,11 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.dateEdit1);
+            this.panelControl1.Controls.Add(this.cmdSearch);
+            this.panelControl1.Controls.Add(this.txtTtansactionAmt);
+            this.panelControl1.Controls.Add(this.searchLookUpEditReportName);
+            this.panelControl1.Controls.Add(this.dateEditTransaction);
             this.panelControl1.Controls.Add(this.textEdit3);
-            this.panelControl1.Controls.Add(this.textEdit2);
-            this.panelControl1.Controls.Add(this.textEdit1);
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.labelControl4);
             this.panelControl1.Controls.Add(this.labelControl3);
@@ -375,42 +380,27 @@
             this.panelControl1.Size = new System.Drawing.Size(1013, 127);
             this.panelControl1.TabIndex = 21;
             // 
-            // dateEdit1
+            // dateEditTransaction
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(176, 41);
-            this.dateEdit1.MenuManager = this.barManager1;
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTransaction.EditValue = null;
+            this.dateEditTransaction.Location = new System.Drawing.Point(176, 41);
+            this.dateEditTransaction.MenuManager = this.barManager1;
+            this.dateEditTransaction.Name = "dateEditTransaction";
+            this.dateEditTransaction.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTransaction.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(216, 20);
-            this.dateEdit1.TabIndex = 10;
+            this.dateEditTransaction.Size = new System.Drawing.Size(216, 20);
+            this.dateEditTransaction.TabIndex = 10;
             // 
             // textEdit3
             // 
             this.textEdit3.Location = new System.Drawing.Point(176, 93);
             this.textEdit3.MenuManager = this.barManager1;
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(216, 20);
+            this.textEdit3.Size = new System.Drawing.Size(113, 20);
             this.textEdit3.TabIndex = 9;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(176, 67);
-            this.textEdit2.MenuManager = this.barManager1;
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(216, 20);
-            this.textEdit2.TabIndex = 8;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(176, 15);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(216, 20);
-            this.textEdit1.TabIndex = 7;
+            this.textEdit3.ToolTip = "O\r\nP\r\nA";
             // 
             // labelControl5
             // 
@@ -452,6 +442,51 @@
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Search Condition :";
             // 
+            // searchLookUpEditReportName
+            // 
+            this.searchLookUpEditReportName.EditValue = "[EditValue is null]";
+            this.searchLookUpEditReportName.Location = new System.Drawing.Point(176, 15);
+            this.searchLookUpEditReportName.MenuManager = this.barManager1;
+            this.searchLookUpEditReportName.Name = "searchLookUpEditReportName";
+            this.searchLookUpEditReportName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEditReportName.Properties.NullText = "-- All Report --";
+            this.searchLookUpEditReportName.Properties.PopupView = this.searchLookUpEdit1View;
+            this.searchLookUpEditReportName.Size = new System.Drawing.Size(216, 20);
+            this.searchLookUpEditReportName.TabIndex = 11;
+            this.searchLookUpEditReportName.EditValueChanged += new System.EventHandler(this.searchLookUpEditReportName_EditValueChanged);
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // txtTtansactionAmt
+            // 
+            this.txtTtansactionAmt.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtTtansactionAmt.Location = new System.Drawing.Point(177, 68);
+            this.txtTtansactionAmt.MenuManager = this.barManager1;
+            this.txtTtansactionAmt.Name = "txtTtansactionAmt";
+            this.txtTtansactionAmt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtTtansactionAmt.Size = new System.Drawing.Size(215, 20);
+            this.txtTtansactionAmt.TabIndex = 12;
+            // 
+            // cmdSearch
+            // 
+            this.cmdSearch.Location = new System.Drawing.Point(295, 94);
+            this.cmdSearch.Name = "cmdSearch";
+            this.cmdSearch.Size = new System.Drawing.Size(97, 23);
+            this.cmdSearch.TabIndex = 13;
+            this.cmdSearch.Text = "Search";
+            this.cmdSearch.Click += new System.EventHandler(this.cmdSearch_Click);
+            // 
             // frm000ReportWorkFlowStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,6 +499,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm000ReportWorkFlowStatus";
             this.Text = "000 Report Workflow Status";
             this.Load += new System.EventHandler(this.frm000ReportWorkFlowStatus_Load);
@@ -475,11 +511,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTransaction.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTransaction.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEditReportName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTtansactionAmt.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,10 +550,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colLastedUpdateBy;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEditTransaction;
         private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -524,5 +559,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraGrid.Columns.GridColumn colNo;
+        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEditReportName;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraEditors.SpinEdit txtTtansactionAmt;
+        private DevExpress.XtraEditors.SimpleButton cmdSearch;
     }
 }
