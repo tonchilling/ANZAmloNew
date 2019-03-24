@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DTO.Amlo.Importing
 {
-  public  class ImportDTO: BaseDTO
+    public class ImportDTO : BaseDTO
     {
         public string HID { get; set; }
         public string DID { get; set; }
@@ -54,5 +54,21 @@ namespace DTO.Amlo.Importing
 
             return dt;
         }
+
+
     }
+
+
+    public class  ImportExcelToArray
+    {
+        public ImportExcelToArray()
+        {
+            Detail = new List<string>();
+        }
+             public string Header { get; set; }
+    public List<string> Detail { get; set; }
 }
+}
+
+
+

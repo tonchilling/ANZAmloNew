@@ -592,6 +592,7 @@
             this.btnVerify.Size = new System.Drawing.Size(170, 65);
             this.btnVerify.TabIndex = 15;
             this.btnVerify.Text = "Verify Existing File";
+            this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
             // 
             // lblStatus
             // 

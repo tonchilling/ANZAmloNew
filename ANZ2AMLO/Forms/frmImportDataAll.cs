@@ -262,6 +262,11 @@ namespace ANZ2AMLO.Forms
 
         }
 
+        private void btnVerify_Click(object sender, EventArgs e)
+        {
+
+        }
+
         void SetupHeader(DataTable dt)
         {
             if (dt != null && dt.Rows.Count > 0)
