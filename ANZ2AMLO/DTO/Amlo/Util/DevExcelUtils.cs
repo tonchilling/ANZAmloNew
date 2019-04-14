@@ -506,12 +506,15 @@ namespace DTO.Util
                             }
                             else {
 
-                                realData = GetRealData(dataArr.Detail[start]);
-                                newRow[dr["ColumnName"].ToString()] = (dr["ColumnName"].ToString() == "TransactionCode" ? tranCode : "") + realData.Replace(replaceCondition, "")
-                                                                                     .Replace("|", "")
-                                                                                    .Replace(":/", "")
-                                                                                   .Replace("}", "")
-                                                                                   .Replace("{", "").Trim();
+                                if (replaceCondition != "")
+                                {
+                                    realData = GetRealData(dataArr.Detail[start]);
+                                    newRow[dr["ColumnName"].ToString()] = (dr["ColumnName"].ToString() == "TransactionCode" ? tranCode : "") + realData.Replace(replaceCondition, "")
+                                                                                         .Replace("|", "")
+                                                                                        .Replace(":/", "")
+                                                                                       .Replace("}", "")
+                                                                                       .Replace("{", "").Trim();
+                                }
                             }
 
                         }

@@ -59,11 +59,6 @@
             this.colFromTotal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lblDetail = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.btnClose = new DevExpress.XtraEditors.ButtonEdit();
-            this.gdViewDetail = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pStatus = new DevExpress.XtraEditors.ProgressBarControl();
             this.lblStatus = new DevExpress.XtraEditors.LabelControl();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ANZ2AMLO.Forms.WaitForm1), true, true);
@@ -114,13 +109,22 @@
             this.txtImportFolder = new DevExpress.XtraEditors.TextEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.popDetail = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.pnlDepartment = new System.Windows.Forms.Panel();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.ddlDepartment = new System.Windows.Forms.ComboBox();
+            this.btnUpdateDepartment = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClose = new DevExpress.XtraEditors.ButtonEdit();
+            this.lblDetail = new DevExpress.XtraEditors.LabelControl();
+            this.gdViewDetail = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.chkSelect1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImportDaily)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdViewDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -140,6 +144,11 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popDetail)).BeginInit();
             this.popDetail.SuspendLayout();
+            this.pnlDepartment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdViewDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnView
@@ -333,64 +342,6 @@
             this.colHID.Caption = "HID";
             this.colHID.FieldName = "HID";
             this.colHID.Name = "colHID";
-            // 
-            // lblDetail
-            // 
-            this.lblDetail.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetail.Appearance.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDetail.Appearance.Options.UseFont = true;
-            this.lblDetail.Appearance.Options.UseForeColor = true;
-            this.lblDetail.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblDetail.Location = new System.Drawing.Point(91, 46);
-            this.lblDetail.Name = "lblDetail";
-            this.lblDetail.Size = new System.Drawing.Size(539, 23);
-            this.lblDetail.TabIndex = 9;
-            this.lblDetail.Text = "xx";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.DimGray;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(16, 46);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(69, 23);
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "Detail :";
-            // 
-            // btnClose
-            // 
-            this.btnClose.EditValue = "CLOSE";
-            this.btnClose.Location = new System.Drawing.Point(1072, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnClose.Properties.Appearance.Options.UseFont = true;
-            this.btnClose.Properties.AutoHeight = false;
-            this.btnClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.btnClose.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close)});
-            this.btnClose.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnClose.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnClose.Size = new System.Drawing.Size(42, 29);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.EditValueChanged += new System.EventHandler(this.btnClose_EditValueChanged);
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // gdViewDetail
-            // 
-            this.gdViewDetail.Location = new System.Drawing.Point(16, 91);
-            this.gdViewDetail.MainView = this.gridView2;
-            this.gdViewDetail.Name = "gdViewDetail";
-            this.gdViewDetail.Size = new System.Drawing.Size(1100, 378);
-            this.gdViewDetail.TabIndex = 0;
-            this.gdViewDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.gdViewDetail;
-            this.gridView2.Name = "gridView2";
             // 
             // pStatus
             // 
@@ -914,16 +865,156 @@
             // popDetail
             // 
             this.popDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.popDetail.Controls.Add(this.pnlDepartment);
+            this.popDetail.Controls.Add(this.btnDelete);
             this.popDetail.Controls.Add(this.btnClose);
             this.popDetail.Controls.Add(this.lblDetail);
             this.popDetail.Controls.Add(this.gdViewDetail);
             this.popDetail.Controls.Add(this.labelControl3);
-            this.popDetail.Location = new System.Drawing.Point(44, 344);
+            this.popDetail.Location = new System.Drawing.Point(84, 261);
             this.popDetail.Manager = this.barManager1;
             this.popDetail.Name = "popDetail";
-            this.popDetail.Size = new System.Drawing.Size(1139, 127);
-            this.popDetail.TabIndex = 19;
+            this.popDetail.Size = new System.Drawing.Size(1226, 415);
+            this.popDetail.TabIndex = 28;
             this.popDetail.Visible = false;
+            // 
+            // pnlDepartment
+            // 
+            this.pnlDepartment.Controls.Add(this.labelControl14);
+            this.pnlDepartment.Controls.Add(this.ddlDepartment);
+            this.pnlDepartment.Controls.Add(this.btnUpdateDepartment);
+            this.pnlDepartment.Location = new System.Drawing.Point(17, 75);
+            this.pnlDepartment.Name = "pnlDepartment";
+            this.pnlDepartment.Size = new System.Drawing.Size(648, 44);
+            this.pnlDepartment.TabIndex = 22;
+            this.pnlDepartment.Visible = false;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl14.Appearance.ForeColor = System.Drawing.Color.DimGray;
+            this.labelControl14.Appearance.Options.UseFont = true;
+            this.labelControl14.Appearance.Options.UseForeColor = true;
+            this.labelControl14.Location = new System.Drawing.Point(3, 9);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(109, 19);
+            this.labelControl14.TabIndex = 11;
+            this.labelControl14.Text = "Department :";
+            // 
+            // ddlDepartment
+            // 
+            this.ddlDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ddlDepartment.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlDepartment.FormattingEnabled = true;
+            this.ddlDepartment.Location = new System.Drawing.Point(118, 9);
+            this.ddlDepartment.Name = "ddlDepartment";
+            this.ddlDepartment.Size = new System.Drawing.Size(334, 27);
+            this.ddlDepartment.TabIndex = 12;
+            // 
+            // btnUpdateDepartment
+            // 
+            this.btnUpdateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateDepartment.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDepartment.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateDepartment.Appearance.Options.UseFont = true;
+            this.btnUpdateDepartment.Appearance.Options.UseForeColor = true;
+            this.btnUpdateDepartment.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnUpdateDepartment.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateDepartment.ImageOptions.Image")));
+            this.btnUpdateDepartment.Location = new System.Drawing.Point(462, 5);
+            this.btnUpdateDepartment.Name = "btnUpdateDepartment";
+            this.btnUpdateDepartment.Size = new System.Drawing.Size(111, 32);
+            this.btnUpdateDepartment.TabIndex = 20;
+            this.btnUpdateDepartment.Text = "Update";
+            this.btnUpdateDepartment.Click += new System.EventHandler(this.btnUpdateDepartment_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Appearance.Options.UseFont = true;
+            this.btnDelete.Appearance.Options.UseForeColor = true;
+            this.btnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(16, 125);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 35);
+            this.btnDelete.TabIndex = 21;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.EditValue = "CLOSE";
+            this.btnClose.Location = new System.Drawing.Point(1090, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnClose.Properties.Appearance.Options.UseFont = true;
+            this.btnClose.Properties.AutoHeight = false;
+            this.btnClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.btnClose.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Close)});
+            this.btnClose.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnClose.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnClose.Size = new System.Drawing.Size(42, 29);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblDetail
+            // 
+            this.lblDetail.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetail.Appearance.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDetail.Appearance.Options.UseFont = true;
+            this.lblDetail.Appearance.Options.UseForeColor = true;
+            this.lblDetail.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblDetail.Location = new System.Drawing.Point(91, 46);
+            this.lblDetail.Name = "lblDetail";
+            this.lblDetail.Size = new System.Drawing.Size(539, 23);
+            this.lblDetail.TabIndex = 9;
+            this.lblDetail.Text = "xx";
+            // 
+            // gdViewDetail
+            // 
+            this.gdViewDetail.Location = new System.Drawing.Point(16, 166);
+            this.gdViewDetail.MainView = this.gridView2;
+            this.gdViewDetail.Name = "gdViewDetail";
+            this.gdViewDetail.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.chkEdit});
+            this.gdViewDetail.Size = new System.Drawing.Size(1100, 183);
+            this.gdViewDetail.TabIndex = 0;
+            this.gdViewDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.chkSelect1});
+            this.gridView2.GridControl = this.gdViewDetail;
+            this.gridView2.Name = "gridView2";
+            // 
+            // chkSelect1
+            // 
+            this.chkSelect1.Caption = "Select";
+            this.chkSelect1.Name = "chkSelect1";
+            this.chkSelect1.Visible = true;
+            this.chkSelect1.VisibleIndex = 0;
+            // 
+            // chkEdit
+            // 
+            this.chkEdit.AutoHeight = false;
+            this.chkEdit.Name = "chkEdit";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.DimGray;
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
+            this.labelControl3.Location = new System.Drawing.Point(16, 46);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(69, 23);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Detail :";
             // 
             // frmImportData
             // 
@@ -943,9 +1034,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gdView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImportDaily)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdViewDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -971,6 +1059,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.popDetail)).EndInit();
             this.popDetail.ResumeLayout(false);
             this.popDetail.PerformLayout();
+            this.pnlDepartment.ResumeLayout(false);
+            this.pnlDepartment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdViewDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -993,13 +1087,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFromTotal;
         private DevExpress.XtraGrid.Columns.GridColumn colDID;
         private DevExpress.XtraGrid.Columns.GridColumn colHID;
-        private DevExpress.XtraGrid.GridControl gdViewDetail;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.ButtonEdit btnClose;
         private DevExpress.XtraEditors.ProgressBarControl pStatus;
         private DevExpress.XtraEditors.LabelControl lblStatus;
-        private DevExpress.XtraEditors.LabelControl lblDetail;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraEditors.SimpleButton btnExport;
         private DevExpress.XtraBars.Bar bar2;
@@ -1033,7 +1122,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TextEdit txtImportFolder;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraBars.PopupControlContainer popDetail;
         private System.Windows.Forms.DateTimePicker dtTranDate;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -1051,6 +1139,18 @@
         private DevExpress.XtraEditors.TextEdit txtPeriod;
         private DevExpress.XtraGrid.Columns.GridColumn colImportD;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnImportDaily;
-        
+        private DevExpress.XtraBars.PopupControlContainer popDetail;
+        private System.Windows.Forms.Panel pnlDepartment;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private System.Windows.Forms.ComboBox ddlDepartment;
+        private DevExpress.XtraEditors.SimpleButton btnUpdateDepartment;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.ButtonEdit btnClose;
+        private DevExpress.XtraEditors.LabelControl lblDetail;
+        private DevExpress.XtraGrid.GridControl gdViewDetail;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn chkSelect1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkEdit;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

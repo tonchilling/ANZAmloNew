@@ -10,6 +10,8 @@ namespace DTO.Amlo.Trans
     {
         public string colNo { get; set; }
         public string GroupName { get; set; }
+        public string Department { get; set; }
+        public string FileType { get; set; }
         public string Status { get; set; }
         public string ANZCustomerInstrumentId { get; set; }
         public string ANZCustomerBANKAccountNumber { get; set; }
@@ -53,7 +55,8 @@ namespace DTO.Amlo.Trans
             dt.Columns.Add("TranOID");
 
             dt.Columns.Add("FileType");
-            dt.Columns.Add("GroupNam");
+            dt.Columns.Add("GroupName");
+            dt.Columns.Add("Department");
             dt.Columns.Add("CustomerInstrumentId");
             dt.Columns.Add("CustomerBankAccountNumber");
             dt.Columns.Add("ANZCustomerId");

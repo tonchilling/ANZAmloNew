@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransactionMaster));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnView = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.col5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FileType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Department = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,6 +106,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ANZ2AMLO.Forms.WaitForm1), true, true);
             this.popDetail = new DevExpress.XtraEditors.GroupControl();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
@@ -166,7 +169,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtGroupName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDepartment = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdView)).BeginInit();
@@ -200,7 +204,7 @@
             this.btnView.AutoHeight = false;
             this.btnView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.btnView.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "VIEW", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnView.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnView.Name = "btnView";
             this.btnView.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -232,6 +236,8 @@
             this.colNo,
             this.col5,
             this.gridColumn1,
+            this.FileType,
+            this.Department,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
@@ -280,13 +286,29 @@
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
             // 
+            // FileType
+            // 
+            this.FileType.Caption = "Transaction Type";
+            this.FileType.FieldName = "FileType";
+            this.FileType.Name = "FileType";
+            this.FileType.Visible = true;
+            this.FileType.VisibleIndex = 3;
+            // 
+            // Department
+            // 
+            this.Department.Caption = "Department";
+            this.Department.FieldName = "Department";
+            this.Department.Name = "Department";
+            this.Department.Visible = true;
+            this.Department.VisibleIndex = 4;
+            // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Status";
             this.gridColumn2.FieldName = "Status";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.VisibleIndex = 5;
             // 
             // gridColumn3
             // 
@@ -294,7 +316,7 @@
             this.gridColumn3.FieldName = "ANZCustomerInstrumentId";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.VisibleIndex = 6;
             this.gridColumn3.Width = 116;
             // 
             // gridColumn4
@@ -303,7 +325,7 @@
             this.gridColumn4.FieldName = "ANZCustomerBANKAccountNumber";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.VisibleIndex = 7;
             this.gridColumn4.Width = 168;
             // 
             // gridColumn5
@@ -312,7 +334,7 @@
             this.gridColumn5.FieldName = "TransactionDate";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.VisibleIndex = 8;
             this.gridColumn5.Width = 113;
             // 
             // gridColumn6
@@ -321,7 +343,7 @@
             this.gridColumn6.FieldName = "TranxSendReceive";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 7;
+            this.gridColumn6.VisibleIndex = 9;
             this.gridColumn6.Width = 113;
             // 
             // gridColumn7
@@ -330,7 +352,7 @@
             this.gridColumn7.FieldName = "TranxAmountTHB";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 8;
+            this.gridColumn7.VisibleIndex = 10;
             this.gridColumn7.Width = 79;
             // 
             // gridColumn8
@@ -339,7 +361,7 @@
             this.gridColumn8.FieldName = "TranxAmountCurrency";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.VisibleIndex = 11;
             this.gridColumn8.Width = 98;
             // 
             // gridColumn9
@@ -348,7 +370,7 @@
             this.gridColumn9.FieldName = "TranxExchangeRate";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 10;
+            this.gridColumn9.VisibleIndex = 12;
             // 
             // gridColumn10
             // 
@@ -356,7 +378,7 @@
             this.gridColumn10.FieldName = "TranxObjective";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 11;
+            this.gridColumn10.VisibleIndex = 13;
             // 
             // gridColumn11
             // 
@@ -364,7 +386,7 @@
             this.gridColumn11.FieldName = "ANZCutomerRegisterName";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 12;
+            this.gridColumn11.VisibleIndex = 14;
             // 
             // gridColumn12
             // 
@@ -372,7 +394,7 @@
             this.gridColumn12.FieldName = "ANZCustomerRegisterID";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 13;
+            this.gridColumn12.VisibleIndex = 15;
             // 
             // gridColumn13
             // 
@@ -380,7 +402,7 @@
             this.gridColumn13.FieldName = "ANZCutomerBusinessCode";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 14;
+            this.gridColumn13.VisibleIndex = 16;
             // 
             // gridColumn14
             // 
@@ -388,7 +410,7 @@
             this.gridColumn14.FieldName = "ANZCutomerRegisterAddress";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 15;
+            this.gridColumn14.VisibleIndex = 17;
             // 
             // gridColumn15
             // 
@@ -396,7 +418,7 @@
             this.gridColumn15.FieldName = "ANZCutomerRegisterAddressCountry";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 16;
+            this.gridColumn15.VisibleIndex = 18;
             // 
             // gridColumn16
             // 
@@ -404,7 +426,7 @@
             this.gridColumn16.FieldName = "ANZCustomerRegisterDate";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 17;
+            this.gridColumn16.VisibleIndex = 19;
             // 
             // gridColumn17
             // 
@@ -412,7 +434,7 @@
             this.gridColumn17.FieldName = "SendBankAccountNumber";
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 18;
+            this.gridColumn17.VisibleIndex = 20;
             // 
             // gridColumn18
             // 
@@ -420,7 +442,7 @@
             this.gridColumn18.FieldName = "SendTranxRefNo";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 19;
+            this.gridColumn18.VisibleIndex = 21;
             // 
             // gridColumn19
             // 
@@ -428,7 +450,7 @@
             this.gridColumn19.FieldName = "SendBankName";
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 20;
+            this.gridColumn19.VisibleIndex = 22;
             // 
             // gridColumn20
             // 
@@ -436,7 +458,7 @@
             this.gridColumn20.FieldName = "SendBankCountry";
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 21;
+            this.gridColumn20.VisibleIndex = 23;
             // 
             // gridColumn21
             // 
@@ -444,7 +466,7 @@
             this.gridColumn21.FieldName = "SendName";
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 22;
+            this.gridColumn21.VisibleIndex = 24;
             // 
             // gridColumn22
             // 
@@ -452,7 +474,7 @@
             this.gridColumn22.FieldName = "SendAddress";
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 23;
+            this.gridColumn22.VisibleIndex = 25;
             // 
             // gridColumn23
             // 
@@ -460,7 +482,7 @@
             this.gridColumn23.FieldName = "SendDescription";
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 24;
+            this.gridColumn23.VisibleIndex = 26;
             // 
             // gridColumn24
             // 
@@ -468,7 +490,7 @@
             this.gridColumn24.FieldName = "SendIdNo";
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 25;
+            this.gridColumn24.VisibleIndex = 27;
             // 
             // gridColumn25
             // 
@@ -476,7 +498,7 @@
             this.gridColumn25.FieldName = "SendIdIssueBy";
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 26;
+            this.gridColumn25.VisibleIndex = 28;
             // 
             // gridColumn26
             // 
@@ -484,7 +506,7 @@
             this.gridColumn26.FieldName = "BeneBankAccountNumber";
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 27;
+            this.gridColumn26.VisibleIndex = 29;
             // 
             // gridColumn27
             // 
@@ -492,7 +514,7 @@
             this.gridColumn27.FieldName = "BeneTranxRefNo";
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
-            this.gridColumn27.VisibleIndex = 28;
+            this.gridColumn27.VisibleIndex = 30;
             // 
             // gridColumn28
             // 
@@ -500,7 +522,7 @@
             this.gridColumn28.FieldName = "BeneBankName";
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
-            this.gridColumn28.VisibleIndex = 29;
+            this.gridColumn28.VisibleIndex = 31;
             // 
             // gridColumn29
             // 
@@ -508,7 +530,7 @@
             this.gridColumn29.FieldName = "BeneBankCountry";
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 30;
+            this.gridColumn29.VisibleIndex = 32;
             // 
             // gridColumn30
             // 
@@ -516,7 +538,7 @@
             this.gridColumn30.FieldName = "BeneName";
             this.gridColumn30.Name = "gridColumn30";
             this.gridColumn30.Visible = true;
-            this.gridColumn30.VisibleIndex = 31;
+            this.gridColumn30.VisibleIndex = 33;
             // 
             // gridColumn31
             // 
@@ -524,7 +546,7 @@
             this.gridColumn31.FieldName = "BeneAddress";
             this.gridColumn31.Name = "gridColumn31";
             this.gridColumn31.Visible = true;
-            this.gridColumn31.VisibleIndex = 32;
+            this.gridColumn31.VisibleIndex = 34;
             // 
             // gridColumn32
             // 
@@ -532,7 +554,7 @@
             this.gridColumn32.FieldName = "BeneIdDescription";
             this.gridColumn32.Name = "gridColumn32";
             this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 33;
+            this.gridColumn32.VisibleIndex = 35;
             // 
             // gridColumn33
             // 
@@ -540,7 +562,7 @@
             this.gridColumn33.FieldName = "BeneIdNo";
             this.gridColumn33.Name = "gridColumn33";
             this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 34;
+            this.gridColumn33.VisibleIndex = 36;
             // 
             // gridColumn34
             // 
@@ -548,7 +570,7 @@
             this.gridColumn34.FieldName = "BeneIdIssueBy";
             this.gridColumn34.Name = "gridColumn34";
             this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 35;
+            this.gridColumn34.VisibleIndex = 37;
             // 
             // gdView
             // 
@@ -685,9 +707,9 @@
             this.btnExportExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.ImageOptions.Image")));
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            toolTipTitleItem1.Text = "Export to Excel";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnExportExcel.SuperTip = superToolTip1;
+            toolTipTitleItem3.Text = "Export to Excel";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnExportExcel.SuperTip = superToolTip3;
             this.btnExportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExportExcel_ItemClick);
             // 
             // barButtonItem2
@@ -817,6 +839,16 @@
             this.popDetail.TabIndex = 6;
             this.popDetail.Text = "Detail";
             this.popDetail.Visible = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
+            this.btnClose.Location = new System.Drawing.Point(927, -1);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(39, 32);
+            this.btnClose.TabIndex = 45;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnExit
             // 
@@ -1289,6 +1321,8 @@
             this.groupControl2.AppearanceCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.groupControl2.AppearanceCaption.Options.UseBackColor = true;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
+            this.groupControl2.Controls.Add(this.txtDepartment);
+            this.groupControl2.Controls.Add(this.label10);
             this.groupControl2.Controls.Add(this.txtObjective);
             this.groupControl2.Controls.Add(this.label9);
             this.groupControl2.Controls.Add(this.txtExchangeRate);
@@ -1470,7 +1504,7 @@
             this.txtGroupName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGroupName.Location = new System.Drawing.Point(91, 42);
             this.txtGroupName.Name = "txtGroupName";
-            this.txtGroupName.Size = new System.Drawing.Size(328, 23);
+            this.txtGroupName.Size = new System.Drawing.Size(97, 23);
             this.txtGroupName.TabIndex = 4;
             // 
             // label1
@@ -1484,15 +1518,24 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Group Name";
             // 
-            // btnClose
+            // label10
             // 
-            this.btnClose.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.btnClose.Location = new System.Drawing.Point(927, -1);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(39, 32);
-            this.btnClose.TabIndex = 45;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(194, 45);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 16);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Department";
+            // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartment.Location = new System.Drawing.Point(269, 43);
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Size = new System.Drawing.Size(150, 23);
+            this.txtDepartment.TabIndex = 22;
             // 
             // frmTransactionMaster
             // 
@@ -1667,5 +1710,9 @@
         private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnClose;
+        private DevExpress.XtraGrid.Columns.GridColumn FileType;
+        private DevExpress.XtraGrid.Columns.GridColumn Department;
+        private System.Windows.Forms.TextBox txtDepartment;
+        private System.Windows.Forms.Label label10;
     }
 }

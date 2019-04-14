@@ -120,10 +120,11 @@ namespace ANZ2AMLO.Forms
         public string BeneIdNo { get; set; }
         public string BeneIdIssueBy { get; set; }*/
 
-        txtInstrumentId.Text = gridView1.GetFocusedRowCellValue("ANZCustomerInstrumentId").ToString();
-            txtBANKAccount.Text = gridView1.GetFocusedRowCellValue("ANZCustomerBANKAccountNumber").ToString();
-            txtTransactionDate.Text = gridView1.GetFocusedRowCellValue("TransactionDate").ToString();
-            txtTranxSendReceive.Text = gridView1.GetFocusedRowCellValue("TranxSendReceive").ToString();
+            txtDepartment.Text= gridView1.GetFocusedRowCellValue("Department") != null ? gridView1.GetFocusedRowCellValue("Department").ToString():"";
+            txtInstrumentId.Text = gridView1.GetFocusedRowCellValue("ANZCustomerInstrumentId") != null ?  gridView1.GetFocusedRowCellValue("ANZCustomerInstrumentId").ToString() : "";
+            txtBANKAccount.Text = gridView1.GetFocusedRowCellValue("ANZCustomerBANKAccountNumber") != null ?  gridView1.GetFocusedRowCellValue("ANZCustomerBANKAccountNumber").ToString() : "";
+            txtTransactionDate.Text = gridView1.GetFocusedRowCellValue("TransactionDate") != null ?  gridView1.GetFocusedRowCellValue("TransactionDate").ToString():"";
+            txtTranxSendReceive.Text = gridView1.GetFocusedRowCellValue("TranxSendReceive") != null ?  gridView1.GetFocusedRowCellValue("TranxSendReceive").ToString() : "";
             txtTranxAmountTHB.Text = gridView1.GetFocusedRowCellValue("TranxAmountTHB")!=null? gridView1.GetFocusedRowCellValue("TranxAmountTHB").ToString():"";
             txtCurrency.Text = gridView1.GetFocusedRowCellValue("TranxAmountCurrency") != null ? gridView1.GetFocusedRowCellValue("TranxAmountCurrency").ToString() : "";
             txtExchangeRate.Text = gridView1.GetFocusedRowCellValue("TranxExchangeRate") != null ? gridView1.GetFocusedRowCellValue("TranxExchangeRate").ToString() : "";
@@ -216,15 +217,16 @@ namespace ANZ2AMLO.Forms
             dRow["CustRegisterAddress"]= txtANZAddress.Text;
             dRow["CustRegisterAddressCountry"]= txtANZCountry.Text;
 
-            dRow["CustRegisterDate"]= txtANZRegisterDate.Text;
+            dRow["CustRegisterDate"]= Utility.ConvertFormatDatetime(txtANZRegisterDate.Text);
    
-            dRow["TransactionDate"] = txtTransactionDate.Text;
+            dRow["TransactionDate"] = Utility.ConvertFormatDatetime(txtTransactionDate.Text);
             dRow["TranxAmountThb"]= txtTranxAmountTHB.Text;
-            dRow["TranxAmountCurrency"]=txtANZCountry.Text;
+            dRow["TranxAmountCurrency"] = txtCurrency.Text;
             dRow["TranxCurrency"]= txtCurrency.Text;
             dRow["TranxExchangeRate"]= txtExchangeRate.Text;
-            dRow["TranxAmountThbInThWord"]=
-            dRow["TranxInternationalOrDomestic"]=
+            dRow["TranxCurrency"] = txtANZCountry.Text;
+            dRow["TranxAmountThbInThWord"] = "";
+            dRow["TranxInternationalOrDomestic"]= "";
             dRow["TranxSendReceive"]= txtTranxSendReceive.Text;
             dRow["TranxObjective"]= txtObjective.Text;
             dRow["SendTranxRefNo"] = txtSendTranxRefNo.Text;

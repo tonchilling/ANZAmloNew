@@ -29,6 +29,20 @@ namespace DTO.Util
             return shortMonths[month];
         }
 
+         /// <summary>
+         /// input : dd-MM-yyyy
+         /// output : yyMMdd
+         /// </summary>
+         /// <param name="month"></param>
+         /// <returns></returns>
+        public static string ConvertFormatDatetime(string dateString)
+        {
+            string[] strDate = dateString.Split('-');
+            DateTime dt = new DateTime(ConvertToInt(strDate[2]), ConvertToInt(strDate[1]), ConvertToInt(strDate[0]));
+            return string.Format("{0}{1}{2}", dt.Year.ToString().Substring(2,2), dt.Month.ToString("##00"), dt.Day.ToString("##00"));
+        }
+
+
 
         public static string FillZero(string number,int totalZero) 
 		{

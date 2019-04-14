@@ -174,6 +174,22 @@ namespace ANZ2AMLO.Forms
 
         }
 
+        private void btnExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+
+            DataView dvFilter = new DataView(dtDetail);
+            dvFilter.RowFilter = string.Format("KeyWord='{0}'", ddlSourceType.SelectedValue.ToString());
+            string DID = dvFilter[0]["DID"].ToString();
+            dvFilter = new DataView(dtDetail_Col);
+            dvFilter.RowFilter = string.Format("DID='{0}'", DID);
+
+            ANZ2AMLO.BAL.Util.XGenerate.DataToExcel(dtDetailList, dvFilter, ddlSourceType.Text, @"D:\ANZ\Output");
+            System.Threading.Thread.Sleep(3000);
+            splashScreenManager1.CloseWaitForm();
+            DevExpress.XtraEditors.XtraMessageBox.Show("Export files completely!!", "EXPORTING", MessageBoxButtons.OK);
+        }
+
         void LoadMonth()
         {
             txtMonth.Text = string.Format("{0}:{1}", dtTranDate.Value.Month, DTO.Util.Utility.GetShortMonth(dtTranDate.Value.Month));

@@ -47,18 +47,33 @@ namespace ANZ1AMLO.Forms
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            tempDetailDTO = dsAll.Find(o=> o.DID== gridView1.GetFocusedRowCellValue("DID").ToString());
-            if(tempDetailDTO!=null)
+            tempDetailDTO = dsAll.Find(o => o.DID == gridView1.GetFocusedRowCellValue("DID").ToString());
+
+            // gridView1.SetRowCellValue(row, "FileCount", (object)dr["FileCount"].ToString());
+
+            string keyWord = gridView1.GetFocusedRowCellValue("KeyWord").ToString().ToLower();
+            if (tempDetailDTO != null)
             {
                 lblDetail.Text = tempDetailDTO.Data.Tables[0].Rows[0]["SourceFileRefName"].ToString();
+                popDetail.Width = Screen.PrimaryScreen.Bounds.Width - 500;
+                popDetail.Height = Screen.PrimaryScreen.Bounds.Height - 400;
+                btnClose.Location = new Point(popDetail.Width - 50, btnClose.Location.Y);
+                btnDelete.Location = new Point(gdViewDetail.Location.X, btnDelete.Location.Y);
+                // btnUpdateDepartment.Location = new Point(ddlDepartment.Location.X+350, btnUpdateDepartment.Location.Y);
+
+                if (keyWord == "incoming")
+                {
+                    pnlDepartment.Visible = true;
+                }
+                else
+                {
+                    pnlDepartment.Visible = false;
+                }
                 LoadDetailInFile(tempDetailDTO.Data.Tables[1]);
-                popDetail.Width = 1120;
-                popDetail.Height = 600;
-                popDetail.Location = new Point((this.MdiParent.ClientSize.Width / 2) - popDetail.Size.Width / 2, (this.MdiParent.ClientSize.Height / 2) - popDetail.Size.Height / 2);
+
                 popDetail.Show();
 
             }
-          //  MessageBox.Show(gridView1.GetFocusedRowCellValue("DID").ToString());
 
 
         }
@@ -79,6 +94,11 @@ namespace ANZ1AMLO.Forms
             ddlReportCondition.DisplayMember = "Text";
             ddlReportCondition.ValueMember = "Value";
             ddlReportCondition.SelectedIndex = 0;
+
+            ddlDepartment.DataSource = LoadDepartment();
+            ddlDepartment.DisplayMember = "Value";
+            ddlDepartment.ValueMember = "ID";
+            ddlDepartment.SelectedIndex = 0;
 
             currDID = ddlReportCondition.SelectedValue.ToString();
             currDIDDesc = ddlReportCondition.SelectedText.ToString();
@@ -139,10 +159,15 @@ namespace ANZ1AMLO.Forms
 
         void LoadDetailInFile(DataTable dt)
         {
-          gdViewDetail.DataSource = null;
+            gdViewDetail.DataSource = null;
             gridView2.Columns.Clear();
             gdViewDetail.DataSource = dt;
-          
+            this.gridView2.OptionsSelection.MultiSelect = true;
+            this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+
+
+            gdViewDetail.Width = popDetail.Width - 50;
+            gdViewDetail.Height = popDetail.Height - 200;
             gdViewDetail.RefreshDataSource();
             gdViewDetail.Refresh();
         }
@@ -287,6 +312,38 @@ namespace ANZ1AMLO.Forms
                 splashScreenManager1.CloseWaitForm();
             }
 
+        }
+
+        DataTable LoadDepartment()
+        {
+            DataTable dt = new DataTable("dtDepartment");
+
+            dt.Columns.Add("ID");
+            dt.Columns.Add("Value");
+            DataRow dr = null;
+
+            dr = dt.NewRow();
+            dr["ID"] = "1";
+            dr["Value"] = "PCO";
+            dt.Rows.Add(dr);
+            dr = dt.NewRow();
+            dr["ID"] = "2";
+            dr["Value"] = "TRADE";
+            dt.Rows.Add(dr);
+
+            dr = dt.NewRow();
+            dr["ID"] = "3";
+            dr["Value"] = "MARKET";
+            dt.Rows.Add(dr);
+
+
+            dr = dt.NewRow();
+            dr["ID"] = "4";
+            dr["Value"] = "LENDING";
+            dt.Rows.Add(dr);
+
+
+            return dt;
         }
 
         void SetupProgressBar()
@@ -454,6 +511,62 @@ namespace ANZ1AMLO.Forms
 
           
            // DevExpress.XtraEditors.XtraMessageBox.Show("ImportDaily!!", "ImportDaily", MessageBoxButtons.OK);
+        }
+
+        private void btnUpdateDepartment_Click(object sender, EventArgs e)
+        {
+            if (DevExpress.XtraEditors.XtraMessageBox.Show("Do you want to Update Department?", "Updating", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                if (tempDetailDTO != null)
+                {
+                    foreach (DataRow dr in tempDetailDTO.Data.Tables[1].Rows)
+                    {
+                        dr["Department"] = ddlDepartment.Text;
+                    }
+                    tempDetailDTO.Data.Tables[1].AcceptChanges();
+
+                    for (int i = 0; i < gridView2.DataRowCount; i++)
+                    {
+                        gridView2.SetRowCellValue(i, "Department", ddlDepartment.Text);
+                        //  if (gridView1.GetRowCellValue(i, "Department") == value)
+
+                    }
+                    gdViewDetail.RefreshDataSource();
+                    gdViewDetail.Refresh();
+
+
+
+
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int[] selectDeleteRows = this.gridView2.GetSelectedRows();
+
+
+            if (DevExpress.XtraEditors.XtraMessageBox.Show("Do you want to Delete?", "Deleting", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                if (tempDetailDTO.Data.Tables[1] != null)
+                {
+                    foreach (int row in selectDeleteRows.OrderByDescending(x => x))
+                    {
+                        tempDetailDTO.Data.Tables[1].Rows.RemoveAt(row);
+                    }
+
+
+                    //tempDetailDTO = dsAll.Find(o => o.DID == gridView1.GetFocusedRowCellValue("DID").ToString());
+
+                    gridView1.SetRowCellValue(gridView1.GetFocusedDataSourceRowIndex(), "FromTotal", tempDetailDTO.Data.Tables[1].Rows.Count);
+
+
+                    LoadDetailInFile(tempDetailDTO.Data.Tables[1]);
+                }
+            }
+            // gridView2.co
         }
 
         private void gdView_FocusedViewChanged(object sender, DevExpress.XtraGrid.ViewFocusEventArgs e)

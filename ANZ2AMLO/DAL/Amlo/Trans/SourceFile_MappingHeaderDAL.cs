@@ -187,7 +187,8 @@ namespace DAL.Amlo.Trans
                 tempDTO.ImportID = ImportID;
                 tempDTO.CREATE_BY = createBy;
 
-
+                ExcecuteNoneQueryObj("[sp_Importing_TempToIncoming]", tempDTO);
+                ExcecuteNoneQueryObj("[sp_Importing_TempToOutgoing]", tempDTO);
 
                 ExcecuteNoneQueryObj("[sp_Importing_TempToMaster]", tempDTO);
 
